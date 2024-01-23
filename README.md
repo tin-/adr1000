@@ -1,14 +1,14 @@
 # ADR1000 performance study
-Data repository based on xDevs.com modules performance with ADR1000 chips
+Data repository for Analog Devices ADR1000-based xDevs.com module voltage standards performance, collected by [xDevs.com lab](https://xdevs.com/).
 
 Current Status
 --------------
-Drift data collection : 437 days done, in progress
-Data processing: in progress
-Short-term noise evaluation: done
-Tempco evaluation: in progress
-PSRR evaluation: planned
-Power on/off hysteresis evaluation: planned
+* Drift data collection : 437 days done, in progress
+* Data processing: in progress
+* Short-term noise evaluation: done
+* Tempco evaluation: in progress
+* PSRR evaluation: planned
+* Power on/off hysteresis evaluation: planned
 
 Introduction
 ------------
