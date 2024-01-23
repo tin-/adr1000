@@ -1,4 +1,4 @@
-# Long-term drift measurement
+# 0.1-10 Hz bandwidth noise measurement
 ---
 
 Total number of devices evaluated in this test:
