@@ -1,4 +1,4 @@
-# 0.1-10 Hz bandwidth noise measurement
+# Noise measurement in low frequency 0.1 Hz - 10 Hz bandwidth 
 ---
 
 Total number of devices evaluated in this test:
