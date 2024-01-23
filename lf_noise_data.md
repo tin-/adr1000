@@ -57,7 +57,7 @@ Based on this instrumentation following results were obtained:
 * HP 3245A universal source with LTZ1000A KX module reference configured @ 7.19 V DC output measured noise : **TBD nV peak to peak, &sigma; = TBD nV**
 * Keithley 2400 SMU with LM399 reference configured @ 7.19 V DC output measured noise : **TBD nV peak to peak, &sigma; = TBD nV**
 
-![Noise chart summary](https://xdevs.com/doc/xDevs.com/QVRA/lf_noise_chart.png)
+![Noise chart summary](https://xdevs.com/doc/xDevs.com/QVRA/lf_noise_chart_blk.png)
 
 Vertical axis represents measured noise voltage and horizontal axis represent sample number. Blue round markers represent ADR1000 chips, triangles LTZ1000ACH and diamonds LTZ1000CH. Dashed line outline test setup noise floor limit.
 
