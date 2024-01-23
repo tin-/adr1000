@@ -11,7 +11,7 @@ Total number of devices evaluated in this test:
 
 Noise floor of the measurement setup and shorted LNA input measured at **102 nV** with standard deviation **9 nV**. Setup utilize Tektronix DPO7104C real-time oscilloscope and battery-powered AC-coupled LNA with gain +80 dB and pass-band 0.1-10 Hz. All zener chips were evaluated with bipolar Fluke 792A battery power supply to avoid any electrical interference from power line or ground loops. 
 
-Zener current on test FX module PCB was set to 4.05 mA for ADR1000 and about 5.0 mA for LTZ1000. This was achieved by populated 120 &Omega; high stability ametal foil resistor from zener chip anode diode pin 4 and reference return point pin 7. 
+Zener current on test FX module PCB was set to 4.05 mA for ADR1000 and about 5.0 mA for LTZ1000. This was achieved by populated 120 &Omega; high stability wirewound resistor from zener chip anode diode pin 4 and reference return point pin 7. 
 
 ![Shielding can with zener board](https://xdevs.com/doc/xDevs.com/AFX/nstest_rig_1.jpg)
 
