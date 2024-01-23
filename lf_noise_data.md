@@ -11,9 +11,11 @@ Total number of devices evaluated in this test:
 
 Noise floor of the measurement setup and shorted LNA input measured at **102 nV** with standard deviation **9 nV**. Setup utilize Tektronix DPO7104C real-time oscilloscope and battery-powered AC-coupled LNA with gain +80 dB and pass-band 0.1-10 Hz. All zener chips were evaluated with bipolar Fluke 792A battery power supply to avoid any electrical interference from power line or ground loops. 
 
+Zener current on test FX module PCB was set to 4.05 mA for ADR1000 and about 5.0 mA for LTZ1000. This was achieved by populated 120 &Omega; high stability ametal foil resistor from zener chip anode diode pin 4 and reference return point pin 7. 
+
 ![Shielding can with zener board](https://xdevs.com/doc/xDevs.com/AFX/nstest_rig_1.jpg)
 
-Chips were installed in a socket populated on [xDevs.com FX reference module](https://xdevs.com/article/792x) replicating LTZ1000A recommended circuit from datasheet. Raw 6.62/7.x V output signal routed directly to LNA input via shielded coaxial cable. Each chip was powered up for 30 minutes to reach stable oven operating point and settled voltage across LNA input DC block capacitor. Whole module shielded in a metal can to reduce ambient noise interference during the measurement time.
+Chips were installed in a socket populated on [xDevs.com FX reference module](https://xdevs.com/article/792x) replicating LTZ1000A recommended circuit from datasheet. Raw 6.62/7.x V output signal routed directly to LNA input via shielded coaxial cable. Each chip was powered up for 30 minutes to reach stable oven operating point and settled voltage across LNA input DC block capacitor. Whole module shielded in a metal can to reduce ambient noise interference during the measurement time. 
 
 ![![Preview](https://xdevs.com/doc/xDevs.com/AFX/adr_noise_testa_1.png)](https://xdevs.com/doc/xDevs.com/AFX/adr_noise_testa.png)
 
@@ -43,8 +45,10 @@ Based on this instrumentation following results were obtained:
 * Average noise across all 5 chips is **1012 nV peak to peak**
 * Median noise across all 5 chips is **978 nV peak to peak**
 
-## Other devices for reference
+## Other noise values and devices for reference
 
+* LTZ1000A datasheet specification, 1200 nV typical, 2000 nV peak to peak maximum with Iz = 5mA, 0.1 Hz - 10 Hz and Q1 current 100 &micro;A.
+* ADR1000 datasheet specification, 900 nV typical peak to peak, no maximum specification, with Iz = 5mA, 0.1 Hz - 10 Hz and Q1 current 100 &micro;A.
 * xDevs.com QVR module with averaged output by 4 x LTZ1000ACH chip : **442 nV peak to peak, &sigma; = 44 nV**
 * Fluke 5720A multi-function H1 calibrator configured @ 7.19 V output measured noise : **3790 nV peak to peak, &sigma; = 512 nV**
 * Fluke 5720A multi-function H2 calibrator configured @ 7.19 V output measured noise : **TBD nV peak to peak, &sigma; = TBD nV**
@@ -53,7 +57,7 @@ Based on this instrumentation following results were obtained:
 * HP 3245A universal source with LTZ1000A KX module reference configured @ 7.19 V DC output measured noise : **TBD nV peak to peak, &sigma; = TBD nV**
 * Keithley 2400 SMU with LM399 reference configured @ 7.19 V DC output measured noise : **TBD nV peak to peak, &sigma; = TBD nV**
 
-![Noise chart summary](https://xdevs.com/doc/xDevs.com/QVRA/lf_noise_chart_blk.png)
+![Noise chart summary](https://xdevs.com/doc/xDevs.com/QVRA/lf_noise_chart.png)
 
 Vertical axis represents measured noise voltage and horizontal axis represent sample number.
 
@@ -152,5 +156,3 @@ Data set table with all results presented below.
 | QVR #2 , 4 x LTZ1000ACH | 30 week 2019 | 442 nV|44 nV |
 | Fluke 5720A, 7.19VDC    |  N/A         | 3790 nV|512 nV |
 | Setup BN floor          |  N/A         | 102 nV|9 nV |
-
-JAN.23.2024
