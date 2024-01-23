@@ -1,4 +1,4 @@
-# 0.1-10 Hz bandwidth noise measurement
+# Long-term drift measurement
 ---
 
 Total number of devices evaluated in this test:
@@ -10,6 +10,8 @@ Total number of devices evaluated in this test:
 * xDevs.com QVR device with four LTZ1000ACH averaged with passive resistor network
 
 Noise floor of the measurement setup and shorted LNA input measured at **102 nV** with standard deviation **9 nV**. Setup utilize Tektronix DPO7104C real-time oscilloscope and battery-powered AC-coupled LNA with gain +80 dB and pass-band 0.1-10 Hz. All zener chips were evaluated with bipolar Fluke 792A battery power supply to avoid any electrical interference from power line or ground loops. 
+
+![Low frequency noise measurement setup](https://xdevs.com/doc/xDevs.com/QVRA/lf_noise_setup_blk.png)
 
 Zener current on test FX module PCB was set to 4.05 mA for ADR1000 and about 5.0 mA for LTZ1000. This was achieved by populated 120 &Omega; high stability wirewound resistor from zener chip anode diode pin 4 and reference return point pin 7. 
 
@@ -63,7 +65,7 @@ Vertical axis represents measured noise voltage and horizontal axis represent sa
 
 Based on these values new Analog Devices ADR1000AHZ device measured to have 55.4% less noise than older Linear Technology LTZ1000ACH IC. This conclusion also supported by matching noise performance of single ADR1000AHZ compared to combined averaged noise from array of four selected LTZ1000A at a fraction of the BOM cost and power consumption. New reference IC can be very helpful for applications where low frequency noise is a critical performance parameter.
 
-Data set table with all results presented below. 
+Data set table with all measurement values is also presented below for further analysis. 
 
 | Device                  | Datecode      | Measured noise peak-to-peak, 0.1-10 Hz | Standard deviation, 1 &sigma;|
 | :------------ | :-------------: | :---------: | :-------: |
