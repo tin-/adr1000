@@ -30,16 +30,16 @@ Based on this instrumentation following results were obtained:
 ## LTZ1000ACH#PBF chips - 32 pcs
 
 * Lowest noise was measured for chip 2, **651 nV peak to peak in 0.1 Hz - 10 Hz bandwidth**
-* Highest noise was measured for chip 22, **1428 nV peak to peak**
-* Difference between chip 2 and chip 22 is 777 nV peak to peak
-* Average noise across all 32 chips is **879 nV peak to peak**
-* Median noise across all 32 chips is **837 nV peak to peak**
+* Highest noise was measured for chip 28, **1242 nV peak to peak**
+* Difference between chip 2 and chip 28 is 591 nV peak to peak
+* Average noise across all 32 chips is **858 nV peak to peak**
+* Median noise across all 32 chips is **835 nV peak to peak**
 
 ## LTZ1000CH chips - 5 pcs
 
 * Lowest noise was measured for chip 3, **801 nV peak to peak in 0.1 Hz - 10 Hz bandwidth**
 * Highest noise was measured for chip 4, **1428 nV peak to peak**
-* Difference between chip 2 and chip 22 is 627 nV peak to peak
+* Difference between chip 3 and chip 4 is 627 nV peak to peak
 * Average noise across all 5 chips is **1012 nV peak to peak**
 * Median noise across all 5 chips is **978 nV peak to peak**
 
@@ -152,3 +152,5 @@ Data set table with all results presented below.
 | QVR #2 , 4 x LTZ1000ACH | 30 week 2019 | 442 nV|44 nV |
 | Fluke 5720A, 7.19VDC    |  N/A         | 3790 nV|512 nV |
 | Setup BN floor          |  N/A         | 102 nV|9 nV |
+
+JAN.23.2024
