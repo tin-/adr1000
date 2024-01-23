@@ -59,11 +59,11 @@ Based on this instrumentation following results were obtained:
 
 ![Noise chart summary](https://xdevs.com/doc/xDevs.com/QVRA/lf_noise_chart.png)
 
-Vertical axis represents measured noise voltage and horizontal axis represent sample number.
+Vertical axis represents measured noise voltage and horizontal axis represent sample number. Blue round markers represent ADR1000 chips, triangles LTZ1000ACH and diamonds LTZ1000CH. Dashed line outline test setup noise floor limit.
 
 Based on these values new Analog Devices ADR1000AHZ device measured to have 55.4% less noise than older Linear Technology LTZ1000ACH IC. This conclusion also supported by matching noise performance of single ADR1000AHZ compared to combined averaged noise from array of four selected LTZ1000A at a fraction of the BOM cost and power consumption. New reference IC can be very helpful for applications where low frequency noise is a critical performance parameter.
 
-Data set table with all results presented below.
+Data set table with all results presented below. 
 
 | Device                  | Datecode      | Measured noise peak-to-peak, 0.1-10 Hz | Standard deviation, 1 &sigma;|
 | :------------ | :-------------: | :---------: | :-------: |
