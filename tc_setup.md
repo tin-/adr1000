@@ -15,15 +15,15 @@ Instrument setup consisted of set of stable 3458A DMMs, programmable air-bath wi
 
 ![TC measurement setup](https://xdevs.com/doc/xDevs.com/QVRA/tc_setup_blk.png)
 
-A. Set temperatre chamber to fixed +23.0 C and collect 2 hours of voltage output data with 8.5-digit DMM.
-B. Ramp up temperatre chamber to +40.0 C with 0.01C/second speed while logging voltage output data with 8.5-digit DMM.
-C. Set temperatre chamber to +40.0 C and collect 2 hours of voltage output data with 8.5-digit DMM.
-D. Ramp down temperatre chamber to +23.0 C with -0.01C/second speed while logging voltage output data with 8.5-digit DMM.
-E. Set temperatre chamber to +23.0 C and collect 2 hours of voltage output data with 8.5-digit DMM.
-F. Ramp down temperatre chamber to +16.0 C with -0.01C/second speed while logging voltage output data with 8.5-digit DMM.
-G. Set temperatre chamber to +16.0 C and collect 2 hours of voltage output data with 8.5-digit DMM.
-H. Ramp up temperatre chamber to +23.0 C with 0.01C/second speed while logging voltage output data with 8.5-digit DMM.
-I. Set temperatre chamber to +23.0 C and collect 2 hours of voltage output data with 8.5-digit DMM.
+* Step A: Set temperatre chamber to fixed +23.0 C and collect 2 hours of voltage output data with 8.5-digit DMM.
+* Step B: Ramp up temperatre chamber to +40.0 C with 0.01C/second speed while logging voltage output data with 8.5-digit DMM.
+* Step C: Set temperatre chamber to +40.0 C and collect 2 hours of voltage output data with 8.5-digit DMM.
+* Step D: Ramp down temperatre chamber to +23.0 C with -0.01C/second speed while logging voltage output data with 8.5-digit DMM.
+* Step E: Set temperatre chamber to +23.0 C and collect 2 hours of voltage output data with 8.5-digit DMM.
+* Step F: Ramp down temperatre chamber to +16.0 C with -0.01C/second speed while logging voltage output data with 8.5-digit DMM.
+* Step G: Set temperatre chamber to +16.0 C and collect 2 hours of voltage output data with 8.5-digit DMM.
+* Step H: Ramp up temperatre chamber to +23.0 C with 0.01C/second speed while logging voltage output data with 8.5-digit DMM.
+* Step I: Set temperatre chamber to +23.0 C and collect 2 hours of voltage output data with 8.5-digit DMM.
 
 This cycling sequence, data collection and communication with instruments over GPIB was automated with open-source Python program called TECkit running on single-board computer Raspberry Pi. 
 
@@ -32,3 +32,4 @@ Based on this instrumentation following results were obtained:
 Based on these values new Analog Devices ADR1000AHZ device in a typical application circuit can demonstrate temperature stability better than &plusmn;0.05 &micro;V/V/K given the adequate parts selection. This is similar to LTZ1000/LTZ1000A solution which was proven by decades of operation in magnitude of design variations and commercial instruments.
 
 Data set table with all measurement values is also presented below for further analysis. 
+
