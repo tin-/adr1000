@@ -5,7 +5,7 @@ Current Status
 --------------
 * Drift data collection/analysis : [437 days done, in progress](ltd_meas_data.md)
 * Data processing: in progress
-* Short-term noise evaluation: [done](lf_noise.md)
+* Short-term noise evaluation: [done](lf_noise_data.md)
 * Tempco evaluation: [in progress](tc_setup.md)
 * PSRR evaluation: planned
 * Power on/off hysteresis evaluation: planned
