@@ -3,10 +3,10 @@ Data repository for Analog Devices ADR1000-based xDevs.com module voltage standa
 
 Current Status
 --------------
-* Drift data collection : 437 days done, in progress
+* Drift data collection/analysis : [437 days done, in progress](ltd_meas_data.md)
 * Data processing: in progress
-* Short-term noise evaluation: done
-* Tempco evaluation: in progress
+* Short-term noise evaluation: [done](lf_noise.md)
+* Tempco evaluation: [in progress](tc_setup.md)
 * PSRR evaluation: planned
 * Power on/off hysteresis evaluation: planned
 
@@ -14,7 +14,6 @@ Introduction
 ------------
 
 This repository contains the data collected on [xDevs.com QVR](https://xdevs.com/article/qvref/) and [xDevs.com FX](https://xdevs.com/article/792x/) voltage reference modules assembled with [Analog Devices ADR1000AHZ](https://xdevs.com/article/adr1000order/) buried zener IC. Consistent with my primary use cases for these devices in DC voltage metrology projects, these modules designed with focus on low noise (measured at ~500 nV pk-pk from 0.01-10 Hz) and good stability below 10 ppm/year. The project includes number of datasets, provided for analysis and educational use. 
-
 
 Issues and caveats
 ------------------
