@@ -56,7 +56,8 @@ Based on this instrumentation following results were obtained:
 
 * LTZ1000A datasheet specification, 1200 nV typical, 2000 nV peak to peak maximum with Iz = 5mA, 0.1 Hz - 10 Hz and Q1 current 100 &micro;A.
 * ADR1000 datasheet specification, 900 nV typical peak to peak, no maximum specification, with Iz = 5mA, 0.1 Hz - 10 Hz and Q1 current 100 &micro;A.
-* xDevs.com QVR module with averaged output by 4 x LTZ1000ACH chip : **442 nV peak to peak, &sigma; = 44 nV**
+* xDevs.com QVR module with averaged output by 4 x LTZ1000ACH chip, 7.16 V output : **442 nV peak to peak, &sigma; = 44 nV**
+* xDevs.com QVR module with averaged output by 2 x ADR1000 chip, 10 V output : **670 nV peak to peak, &sigma; = 62 nV**
 * Fluke 732C DC voltage standard @ 10 V output : **903 nV peak to peak, &sigma; = 84 nV**
 * Fluke 5720A multi-function H1 calibrator configured @ 7.19 V output measured noise : **3790 nV peak to peak, &sigma; = 512 nV**
 * Fluke 5720A multi-function H2 calibrator configured @ 7.19 V output measured noise : **3704 nV peak to peak, &sigma; = 480 nV**
