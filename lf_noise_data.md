@@ -29,10 +29,10 @@ Based on this instrumentation following results were obtained:
 ## ADR1000AHZ chips - 56 pcs
 
 * Lowest noise was measured for chip 2, **441 nV peak to peak in 0.1 Hz - 10 Hz bandwidth**
-* Highest noise was measured for chip 22, **571 nV peak to peak**
-* Difference between chip 2 and chip 22 is 130 nV peak to peak
-* Average noise across all 56 chips is **486 nV peak to peak**
-* Median noise across all 56 chips is **479 nV peak to peak**
+* Highest noise was measured for chip 53, **580 nV peak to peak**
+* Difference between chip 2 and chip 53 is 139 nV peak to peak
+* Average noise across all 56 chips is **491 nV peak to peak**
+* Median noise across all 56 chips is **481 nV peak to peak**
 
 ## LTZ1000ACH#PBF chips - 35 pcs
 
@@ -124,11 +124,11 @@ Data set table with all measurement values is also presented below for further a
 | ADR1000AHZ chip 48           | 39 week 2018 | 506 nV                                 | 38 nV                        |
 | ADR1000AHZ chip 49           | 39 week 2018 | 531 nV                                 | 52 nV                        |
 | ADR1000AHZ chip 50           | 7 week 2022  | 522 nV                                 | 42 nV                        |
-| ADR1000AHZ chip 51           | 7 week 2022  | TBD nV                                 | TBD nV                        |
-| ADR1000AHZ chip 52           | 9 week 2022  | TBD nV                                 | TBD nV                        |
-| ADR1000AHZ chip 53           | 9 week 2022  | TBD nV                                 | TBD nV                        |
-| ADR1000AHZ chip 54           | 9 week 2022  | TBD nV                                 | TBD nV                        |
-| ADR1000AHZ chip 55           | 9 week 2022  | TBD nV                                 | TBD nV                        |
+| ADR1000AHZ chip 51           | 7 week 2022  | 533 nV                                 | 22 nV                        |
+| ADR1000AHZ chip 52           | 9 week 2022  | 446 nV                                 | 32 nV                        |
+| ADR1000AHZ chip 53           | 9 week 2022  | 580 nV                                 | 40 nV                        |
+| ADR1000AHZ chip 54           | 9 week 2022  | 538 nV                                 | 73 nV                        |
+| ADR1000AHZ chip 55           | 9 week 2022  | 522 nV                                 | 42 nV                        |
 | ADR1000AHZ chip 56           | 33 week 2023 | 514 nV                                 | 35 nV                        |
 | LTZ1000ACH chip 1            | 37 week 2020 | 776 nV                                 | 72 nV                        |
 | LTZ1000ACH chip 2            | 39 week 2020 | 651 nV                                 | 71 nV                        |
