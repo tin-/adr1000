@@ -30,7 +30,7 @@ Based on this instrumentation following results were obtained:
 
 * Lowest noise was measured for chip 2, **441 nV peak to peak in 0.1 Hz - 10 Hz bandwidth**
 * Highest noise was measured for chip 53, **580 nV peak to peak**
-* Difference between chip 2 and chip 53 is 139 nV peak to peak
+* Difference between chip 2 and chip 53 is **139 nV peak to peak**
 * Average noise across all 56 chips is **491 nV peak to peak**
 * Median noise across all 56 chips is **481 nV peak to peak**
 
@@ -38,7 +38,7 @@ Based on this instrumentation following results were obtained:
 
 * Lowest noise was measured for chip 2, **651 nV peak to peak in 0.1 Hz - 10 Hz bandwidth**
 * Highest noise was measured for chip 34, **1399 nV peak to peak**
-* Difference between chip 2 and chip 34 is 748 nV peak to peak
+* Difference between chip 2 and chip 34 is **748 nV peak to peak**
 * Average noise across all 35 chips is **883 nV peak to peak**
 * Median noise across all 35 chips is **837 nV peak to peak**
 * Median standard deviation across all 35 chips is **80 nV peak to peak**
@@ -47,7 +47,7 @@ Based on this instrumentation following results were obtained:
 
 * Lowest noise was measured for chip 12, **678 nV peak to peak in 0.1 Hz - 10 Hz bandwidth**
 * Highest noise was measured for chip 32, **1611 nV peak to peak**
-* Difference between chip 12 and chip 32 is 933 nV peak to peak
+* Difference between chip 12 and chip 32 is **933 nV peak to peak**
 * Average noise across all 34 chips is **949 nV peak to peak**
 * Median noise across all 34 chips is **897 nV peak to peak**
 * Median standard deviation across all 34 chips is **91 nV peak to peak**
