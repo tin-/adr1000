@@ -15,6 +15,8 @@ Chips were soldered on [xDevs.com QVR reference module](https://xdevs.com/articl
 
 Accurate determination of long-term stability and drift rate of a solid-state zener reference is complex subject, specially with stability levels below 50 &micro;V/V. Stability depends on design of the chip, application circuit components selection and performance, PCB layout design, shielding, environmental contributors and method of measurement. All components involved in the design contribute to final output voltage differently. With careful design and validation many of the negative effects can be measured and corrected, but some residual drift will be inherently develop over the long time scales. 
 
+![Long-term drift spec](https://github.com/tin-/adr1000/blob/main/img/ltd_spec.png?raw=true)
+
 Manufacturer long-term stability specifications can be used as a starting point to determine expected performance of the IC. For high performance ovenized zener references such parameter is often included in datasheet as "long-term drift" or "long-term stability". ADR1000 &Delta;VREF_LTD is specified for 5 mA Base-Zener current, 100 &micro;A Collector-Q1 current and ambient temperature +25 &deg;C. We are provided with five relative numbers which include early life drift &plusmn;8.9 &micro;V/V and final drift rate &plusmn; 0.5 &micro;V/V after first 3000 hours powered. Specification of the long-term stability this way departs from more common drift rate representation using &Sqrt;(kHours), such as LTZ1000's specification 2 &Sqrt;(kHours). Representation &Sqrt;(kHours) have own limitations as actual zeners reach small but linear drift rate over few years time, unlike larger theoretical reduction of drift rate over time.
 
 Ideally, measuring the long-term drift of the DUT's output voltage would require a significantly more stable reference so that a direct comparison could be done. Both ADR1000 and LTZ1000 are best chips commercially available to maintain stability better than 1 &micro;V/V, so better reference requirement implies direct comparison to Josephson Voltage Standard over a long duration of time. Such standard was not available for the duration of this study, so instead bank of well aged constantly-powered zener standards was utilized. Bank was calibrated multiple times on the Josehpson Voltage Standard to accurately determine long-term drift.
@@ -39,9 +41,11 @@ Dual-ADR1000 module 10V amplified output long-term drift after first 6200 hours 
 
 Single-ADR1000 module long-term drift after first 6200 hours follows linear -2.711 &micro;V/V/year trend. Temperature coefficient was adjusted to -0.05 &micro;V/V/K in this module, so we don't see additional noise from daily temperature changes in the laboratory. Single ADR1000 demonstrated largest overall deviation from the power up, with final value -8.7 &micro;V/V.
 
-## LTZ1000ACH "FX" unit S/N 001, 10 V output
+## [LTZ1000ACH "FX" unit S/N X102, 10 V output](https://xdevs.com/article/792x/)
 
-Single-LTZ1000 FX module long-term drift after from the very beginning follows linear -0.174 &micro;V/V/year trend. Temperature coefficient was adjusted to -0.03 &micro;V/V/K in this module, so we don't see additional noise from daily temperature changes in the laboratory. This reference runs under constant power uninterrupted since January 2018. 
+![FX Long-term drift](https://xdevs.com/doc/xDevs.com/FX/792x/xbank_nov_792x_2023.png)
+
+Single-LTZ1000 FX module long-term drift after from the very beginning follows linear -0.174 &micro;V/V/year trend over the period of this study and -0.24 &micro;V/V/year over a trend since March 2019 till January 2024. Temperature coefficient was adjusted to -0.03 &micro;V/V/K in this module, so we don't see additional noise from daily temperature changes in the laboratory. This reference runs under constant power uninterrupted since January 2018. 
 
 ## Fluke 732A unit, S/N 4045004
 
