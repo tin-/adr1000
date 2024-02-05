@@ -9,7 +9,7 @@ Total number of devices evaluated in long-term drift test:
 
 ![Long-term drift measurement setup](https://xdevs.com/doc/xDevs.com/QVRA/ltd_setup_chart_bk.png)
 
-Chips were soldered on [xDevs.com QVR reference module](https://xdevs.com/article/qvr) replicating ADR1000/LTZ1000A circuit from datasheet. Raw 6.62/7.x V output signal routed to the output or to the bipolar output gain stage on PCB using kelvin connection. Each unit is assembled and enclosed in metal enclosure for shielding and protection purposes. PCBA is mounted with flexible padding to avoid transfer of mechanical stress of vibration from the exterior instrumentation and environment. Voltage outputs are terminated with bare copper low-thermal 5-way binding posts to minimize thermal EMF.
+Chips were soldered on [xDevs.com QVR reference module](https://xdevs.com/article/qvref) replicating ADR1000/LTZ1000A circuit from datasheet. Raw 6.62/7.x V output signal routed to the output or to the bipolar output gain stage on PCB using kelvin connection. Each unit is assembled and enclosed in metal enclosure for shielding and protection purposes. PCBA is mounted with flexible padding to avoid transfer of mechanical stress of vibration from the exterior instrumentation and environment. Voltage outputs are terminated with bare copper low-thermal 5-way binding posts to minimize thermal EMF.
 
 ## Manufacturer specifications
 
