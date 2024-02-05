@@ -3,9 +3,9 @@
 
 Total number of devices evaluated in this test:
 
-* 49 ADR1000AHZ production devices, manufactured with date code 39 week 2018
-* 5 LTZ1000CH production devices, manufactured in 1986, 1990 and 2019
-* 32 LTZ1000ACH#PBF production devices, manufactured in the end of 2019 and 2020
+* 56 pcs ADR1000AHZ production devices, manufactured with date code 39 week 2018, 7,9 week 2022 and 33 week 2023
+* 34 pcs LTZ1000CH production devices, manufactured from 1986 to 2021
+* 35 pcs LTZ1000ACH#PBF production devices, manufactured in the end of 2019, 2020 and 2022.
 * Two Fluke 5720A multi-function calibrators with output 7.19 VDC configured on 11V DC Voltage range
 * Wavetek 4808 multi-function calibrator
 * Commercial Fluke 732C DC voltage standard (battery-operated)
@@ -16,7 +16,7 @@ Noise floor of the measurement setup and shorted LNA input measured at **102 nV*
 
 ![Low frequency noise measurement setup](https://xdevs.com/doc/xDevs.com/QVRA/lf_noise_setup_blk.png)
 
-Zener current on test FX module PCB was set to 4.05 mA for ADR1000 and about 5.0 mA for LTZ1000. This was achieved by populated 120 &Omega; high stability wirewound resistor from zener chip anode diode pin 4 and reference return point pin 7. 
+Zener current on test FX module PCB was set to 5.0 mA for ADR1000 and about 3.6 mA for LTZ1000. This was achieved by populated (120 &Omega; = LTZ, 80 &Omega; = ADR) high stability resistor from zener chip anode diode pin 4 and reference return point pin 7. 
 
 ![Shielding can with zener board](https://xdevs.com/doc/xDevs.com/AFX/nstest_rig_1.jpg)
 
@@ -26,35 +26,38 @@ Chips were installed in a socket populated on [xDevs.com FX reference module](ht
 
 Based on this instrumentation following results were obtained:
 
-## ADR1000AHZ chips - 49 pcs
+## ADR1000AHZ chips - 56 pcs
 
 * Lowest noise was measured for chip 2, **441 nV peak to peak in 0.1 Hz - 10 Hz bandwidth**
-* Highest noise was measured for chip 22, **571 nV peak to peak**
-* Difference between chip 2 and chip 22 is 130 nV peak to peak
-* Average noise across all 49 chips is **486 nV peak to peak**
-* Median noise across all 49 chips is **479 nV peak to peak**
+* Highest noise was measured for chip 53, **580 nV peak to peak**
+* Difference between chip 2 and chip 53 is **139 nV peak to peak**
+* Average noise across all 56 chips is **491 nV peak to peak**
+* Median noise across all 56 chips is **481 nV peak to peak**
 
-## LTZ1000ACH#PBF chips - 32 pcs
+## LTZ1000ACH#PBF chips - 35 pcs
 
 * Lowest noise was measured for chip 2, **651 nV peak to peak in 0.1 Hz - 10 Hz bandwidth**
-* Highest noise was measured for chip 28, **1242 nV peak to peak**
-* Difference between chip 2 and chip 28 is 591 nV peak to peak
-* Average noise across all 32 chips is **858 nV peak to peak**
-* Median noise across all 32 chips is **835 nV peak to peak**
+* Highest noise was measured for chip 34, **1399 nV peak to peak**
+* Difference between chip 2 and chip 34 is **748 nV peak to peak**
+* Average noise across all 35 chips is **883 nV peak to peak**
+* Median noise across all 35 chips is **837 nV peak to peak**
+* Median standard deviation across all 35 chips is **80 nV peak to peak**
 
-## LTZ1000CH chips - 5 pcs
+## LTZ1000CH chips - 34 pcs
 
-* Lowest noise was measured for chip 3, **801 nV peak to peak in 0.1 Hz - 10 Hz bandwidth**
-* Highest noise was measured for chip 4, **1428 nV peak to peak**
-* Difference between chip 3 and chip 4 is 627 nV peak to peak
-* Average noise across all 5 chips is **1012 nV peak to peak**
-* Median noise across all 5 chips is **978 nV peak to peak**
+* Lowest noise was measured for chip 12, **678 nV peak to peak in 0.1 Hz - 10 Hz bandwidth**
+* Highest noise was measured for chip 32, **1611 nV peak to peak**
+* Difference between chip 12 and chip 32 is **933 nV peak to peak**
+* Average noise across all 34 chips is **949 nV peak to peak**
+* Median noise across all 34 chips is **897 nV peak to peak**
+* Median standard deviation across all 34 chips is **91 nV peak to peak**
 
 ## Other noise values and devices for reference
 
 * LTZ1000A datasheet specification, 1200 nV typical, 2000 nV peak to peak maximum with Iz = 5mA, 0.1 Hz - 10 Hz and Q1 current 100 &micro;A.
 * ADR1000 datasheet specification, 900 nV typical peak to peak, no maximum specification, with Iz = 5mA, 0.1 Hz - 10 Hz and Q1 current 100 &micro;A.
-* xDevs.com QVR module with averaged output by 4 x LTZ1000ACH chip : **442 nV peak to peak, &sigma; = 44 nV**
+* xDevs.com QVR module with averaged output by 4 x LTZ1000ACH chip, 7.16 V output : **442 nV peak to peak, &sigma; = 44 nV**
+* xDevs.com QVR module with averaged output by 2 x ADR1000 chip, 10 V output : **670 nV peak to peak, &sigma; = 62 nV**
 * Fluke 732C DC voltage standard @ 10 V output : **903 nV peak to peak, &sigma; = 84 nV**
 * Fluke 5720A multi-function H1 calibrator configured @ 7.19 V output measured noise : **3790 nV peak to peak, &sigma; = 512 nV**
 * Fluke 5720A multi-function H2 calibrator configured @ 7.19 V output measured noise : **3704 nV peak to peak, &sigma; = 480 nV**
@@ -66,7 +69,7 @@ Based on this instrumentation following results were obtained:
 
 Vertical axis represents measured noise voltage and horizontal axis represent sample number. Blue round markers represent ADR1000 chips, triangles LTZ1000ACH and diamonds LTZ1000CH. Dashed line outline test setup noise floor limit.
 
-Based on these values new Analog Devices ADR1000AHZ device measured to have 55.4% less noise than older Linear Technology LTZ1000ACH IC. This conclusion also supported by matching noise performance of single ADR1000AHZ compared to combined averaged noise from array of four selected LTZ1000A at a fraction of the BOM cost and power consumption. New reference IC can be very helpful for applications where low frequency noise is a critical performance parameter.
+Based on these values on average new Analog Devices ADR1000AHZ device measured to have 55.4% less noise than older Linear Technology LTZ1000ACH IC. This conclusion also supported by matching noise performance of single ADR1000AHZ compared to combined averaged noise from array of four selected LTZ1000A at a fraction of the BOM cost and power consumption. New reference IC can be very helpful for applications where low frequency noise is a critical performance parameter.
 
 Data set table with all measurement values is also presented below for further analysis. 
 
@@ -121,6 +124,13 @@ Data set table with all measurement values is also presented below for further a
 | ADR1000AHZ chip 47           | 39 week 2018 | 509 nV                                 | 47 nV                        |
 | ADR1000AHZ chip 48           | 39 week 2018 | 506 nV                                 | 38 nV                        |
 | ADR1000AHZ chip 49           | 39 week 2018 | 531 nV                                 | 52 nV                        |
+| ADR1000AHZ chip 50           | 7 week 2022  | 522 nV                                 | 42 nV                        |
+| ADR1000AHZ chip 51           | 7 week 2022  | 533 nV                                 | 22 nV                        |
+| ADR1000AHZ chip 52           | 9 week 2022  | 446 nV                                 | 32 nV                        |
+| ADR1000AHZ chip 53           | 9 week 2022  | 580 nV                                 | 40 nV                        |
+| ADR1000AHZ chip 54           | 9 week 2022  | 538 nV                                 | 73 nV                        |
+| ADR1000AHZ chip 55           | 9 week 2022  | 522 nV                                 | 42 nV                        |
+| ADR1000AHZ chip 56           | 33 week 2023 | 514 nV                                 | 35 nV                        |
 | LTZ1000ACH chip 1            | 37 week 2020 | 776 nV                                 | 72 nV                        |
 | LTZ1000ACH chip 2            | 39 week 2020 | 651 nV                                 | 71 nV                        |
 | LTZ1000ACH chip 3            | 39 week 2020 | 881 nV                                 | 78 nV                        |
@@ -153,11 +163,43 @@ Data set table with all measurement values is also presented below for further a
 | LTZ1000ACH chip 30           | 39 week 2020 | 1023 nV                                | 108 nV                       |
 | LTZ1000ACH chip 31           | 39 week 2020 | 842 nV                                 | 56 nV                        |
 | LTZ1000ACH chip 32           | 39 week 2020 | 816 nV                                 | 89 nV                        |
-| LTZ1000CH chip 1             | 28 week 1986 | 987 nV                                 | 209 nV                       |
-| LTZ1000CH chip 2             | 48 week 2019 | 864 nV                                 | 82 nV                        |
-| LTZ1000CH chip 3             | 48 week 2019 | 801 nV                                 | 191 nV                       |
-| LTZ1000CH chip 4             | 15 week 1990 | 1428 nV                                | 226 nV                       |
-| LTZ1000CH chip 5             | 15 week 1990 | 978 nV                                 | 187 nV                       |
+| LTZ1000ACH chip 33           | 9 week 2022  | 1033 nV                                | 63 nV                        |
+| LTZ1000ACH chip 34           | 34 week 2022 | 1399 nV                                | 46 nV                        |
+| LTZ1000ACH chip 35           | 34 week 2022 | 1032 nV                                | 139 nV                       |
+| LTZ1000CH chip 1             | 48 week 2019 | 848 nV                                 | 68  nV                       |
+| LTZ1000CH chip 2             | 48 week 2019 | 947 nV                                 | 128 nV                       |
+| LTZ1000CH chip 3             | 48 week 2019 | 984 nV                                 | 94  nV                       |
+| LTZ1000CH chip 4             | 48 week 2019 | 805 nV                                 | 122 nV                       |
+| LTZ1000CH chip 5             | 28 week 2021 | 952 nV                                 | 91  nV                       |
+| LTZ1000CH chip 6             | 28 week 2021 | 887 nV                                 | 100 nV                       |
+| LTZ1000CH chip 7             | 28 week 2021 | 763 nV                                 | 48  nV                       |
+| LTZ1000CH chip 8             | 28 week 2021 | 754 nV                                 | 88  nV                       |
+| LTZ1000CH chip 9             | 28 week 2021 | 946 nV                                 | 126 nV                       |
+| LTZ1000CH chip 10            | 28 week 2021 | 891 nV                                 | 98  nV                       |
+| LTZ1000CH chip 11            | 28 week 2021 | 887 nV                                 | 77  nV                       |
+| LTZ1000CH chip 12            | 28 week 2021 | 678 nV                                 | 46  nV                       |
+| LTZ1000CH chip 13            | 28 week 2021 | 944 nV                                 | 47  nV                       |
+| LTZ1000CH chip 14            | 28 week 2021 | 930 nV                                 | 102 nV                       |
+| LTZ1000CH chip 15            | 28 week 2021 | 830 nV                                 | 76  nV                       |
+| LTZ1000CH chip 16            | 28 week 2021 | 874 nV                                 | 38  nV                       |
+| LTZ1000CH chip 17            | 28 week 2021 | 950 nV                                 | 100 nV                       |
+| LTZ1000CH chip 18            | 28 week 2021 | 749 nV                                 | 86  nV                       |
+| LTZ1000CH chip 19            | 28 week 2021 | 934 nV                                 | 102 nV                       |
+| LTZ1000CH chip 20            | 28 week 2021 | 836 nV                                 | 88  nV                       |
+| LTZ1000CH chip 21            | 28 week 2021 | 768 nV                                 | 85  nV                       |
+| LTZ1000CH chip 22            | 28 week 2021 | 1337 nV                                | 327 nV                       |
+| LTZ1000CH chip 23            | 28 week 2021 | 784 nV                                 | 53  nV                       |
+| LTZ1000CH chip 24            | 40 week 2019 | 770 nV                                 | 108 nV                       |
+| LTZ1000CH chip 25            | 40 week 2019 | 681 nV                                 | 64  nV                       |
+| LTZ1000CH chip 26            | 15 week 1990 | 1549 nV                                | 123 nV                       |
+| LTZ1000CH chip 27            | 28 week 1986 | 1286 nV                                | 91  nV                       |
+| LTZ1000CH chip 28            | 16 week 1987 | 927 nV                                 | 92  nV                       |
+| LTZ1000CH chip 29            | 15 week 1990 | 1192 nV                                | 132 nV                       |
+| LTZ1000CH chip 30            | 15 week 1990 | 904 nV                                 | 73  nV                       |
+| LTZ1000CH chip 31            | 15 week 1990 | 1317 nV                                | 86  nV                       |
+| LTZ1000CH chip 32            | 30 week 1988 | 1611 nV                                | 224 nV                       |
+| LTZ1000CH chip 33            | 49 week 2016 | 966 nV                                 | 141 nV                       |
+| LTZ1000CH chip 34            | 49 week 2016 | 804 nV                                 | 75  nV                       |
 | QVR, 4 x LTZ1000ACH @ 6.62 V | 30 week 2019 | 442 nV                                 | 44 nV                        |
 | Fluke 732C @ 10 V            |  N/A         | 903 nV                                 | 84 nV                        |
 | Fluke 5720A/H1, @ 7.19 V     |  N/A         | 3790 nV                                | 512 nV                       |
