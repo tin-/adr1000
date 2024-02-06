@@ -56,7 +56,7 @@ Temperature sweep rate varied from 0.1 &deg;C to 0.04 &deg;C/minute to verify se
 | &beta;             | +0.0017        | &micro;V/V/K²|                                   |
 | Temp at &alpha;=0  | 34.5           | &deg;C       |                                   |
 | TC, BOX, 18-28     | -0.0332        | &micro;V/V/K |                                   |
-| U, k=2             | 1.6            | &micro;V/V   | Within 24 hours                   |
+| Relative U, k=2    | 1.6            | &micro;V/V   | Within 24 hours                   |
 
 Temperature chart in the programmable air-bath sensor, placed next to the DUT module is also available. Temperature sensor used is Honeywell HEL-705 PT1000 RTD, digitized with Fluke 1529 thermometer readout. Small +0.2 &deg;C offset was observed during the measurement due to local heating from the power dissipated in the module inside the airbath.
 
