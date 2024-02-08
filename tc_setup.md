@@ -36,7 +36,7 @@ First test is to measure voltage stability against temperature change of individ
 
 The module under test with dual ADR1000 zener IC swept multiple times from +17.0 &deg;C to +55.0 &deg;C set temperature after initial warmup around 3 hours. The test module was powered by linear triple channel power supply and output digitized by three [HP3458A DVMs](https://xdevs.com/fix/hp3458a) and one Keithley 2002LTC continuously. 
 
-| **Dual module**    | **Parameter for cel 1**    | **Parameter for cell 2**    | **Parameter for cell 3**   | **Parameter for cell 4**   | **Unit**     | **Notes**                         |
+| **Dual module**    | **CELL 1**    | **CELL 2**    | **CELL 3**   | **CELL 4**   | **Unit**     | **Notes**                         |
 | :------------      | :-----------:              | :-----------:               | :-----------:              | :-----------:              | :--------:   | :-------------------------------: |
 | Calibration date   | FEB/9/2024                 | FEB/9/2024                  | FEB/9/2024                 | FEB/9/2024                 |              | +23 &deg;C ambient, by 3458+2002 group |
 | Reference Temp T   |       23.00                |       23.00                 |       23.00                |       23.00                | &deg;C       |                                   |
