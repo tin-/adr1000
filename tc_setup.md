@@ -26,7 +26,7 @@ The instrument setup consisted of a set of stable 3458A DMMs, programmable air-b
 * Step H: Ramp up temperature chamber to +23.0 C with a typical speed +0.01 &deg;C/minute while logging voltage output data by DMMs.
 * Step I: Set temperature chamber to +23.0 C and collect few hours of voltage output data by DMMs.
 
-This cycling sequence, data collection and communication with instruments over GPIB was automated with [open-source Python program called TECkit](https://xdevs.com/guide/teckit) running on single-board computer Raspberry Pi 3B. 
+This cycling sequence, data collection and communication with instruments over GPIB was automated with [open-source Python program called TECkit](https://xdevs.com/guide/teckit) running on single-board computer Raspberry Pi 3B. Exact build used to perform these measurements is also [included in this repository](https://github.com/tin-/adr1000/tree/main/python). It is configured to run in console with python-vxi11 and Python 3.x environment.
 
 Based on this instrumentation the following results were obtained:
 
