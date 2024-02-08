@@ -30,9 +30,29 @@ This cycling sequence, data collection and communication with instruments over G
 
 Based on this instrumentation the following results were obtained:
 
-## ADR1000AHZ module QVR4, four chips averaged
+## ADR1000AHZ module QVR4, four chips individual outputs, without trim
 
-TBD
+First test is to measure voltage stability against temperature change of individual zener output for each of the two populated circuits on the QVR module PCBA. This is achieved by removing the connection to averaging resistor network at the output of each cell and routing kelvin-connected 6.6 V to separate DMM. This way it is possible to evaluate ADR1000 circuit performance without the effects of the output gain 10 V amplifier added. ADR1000 circuit tempco can be compensated and adjusted to very low numbers by multiple methods, such as changing series resistance to zener cathode terminal or adding a weak feedback from voltage loop to oven control loop (with series resistor in order 100 k&Omega; to 1 M&Omega; between heater transistor emitter and ADR1000 zener anode pin 4). 
+
+The module under test with dual ADR1000 zener IC swept multiple times from +17.0 &deg;C to +55.0 &deg;C set temperature after initial warmup around 3 hours. The test module was powered by linear triple channel power supply and output digitized by three [HP3458A DVMs](https://xdevs.com/fix/hp3458a) and one Keithley 2002LTC continuously. 
+
+| **Dual module**    | **Parameter for cel 1**    | **Parameter for cell 2**    | **Parameter for cell 3**   | **Parameter for cell 4**   | **Unit**     | **Notes**                         |
+| :------------      | :-----------:              | :-----------:               | :-----------:              | :-----------:              | :--------:   | :-------------------------------: |
+| Calibration date   | FEB/9/2024                 | FEB/9/2024                  | FEB/9/2024                 | FEB/9/2024                 |              | +23 &deg;C ambient, by 3458+2002 group |
+| Reference Temp T   |       23.00                |       23.00                 |       23.00                |       23.00                | &deg;C       |                                   |
+| Nominal output     | 6.62                       | 6.62                        | 6.62                       | 6.62                       | V            | 5 mA, +51 &deg;C 11.5k&Omega;/1k&Omega;|
+| 1st fit const      | XXXXXXXXXXXXXX             | XXXXXXXXXXXXXX              | XXXXXXXXXXXXXX             | XXXXXXXXXXXXXX             |              |                                   |
+| 2nd fit const      | XXXXXXXXXXXXXX             | XXXXXXXXXXXXXX              | XXXXXXXXXXXXXX             | XXXXXXXXXXXXXX             |              |                                   |
+| Gain const         | XXXXXXXXXX                 | XXXXXXXXXX                  | XXXXXXXXXX                 | XXXXXXXXXX                 | V            |                                   |
+| EMF, T₂₃           | **X.XXXXXXX**              | **X.XXXXXXX**               | **X.XXXXXXX**              | **X.XXXXXXX**              | V            |                                   |
+| &alpha; T₂₃        | XXXXXXX                    | XXXXXXX                     | XXXXXXX                    | XXXXXXX                    | &micro;V/V/K |                                   |
+| &beta;             | XXXXXXX                    | XXXXXXX                     | XXXXXXX                    | XXXXXXX                    | &micro;V/V/K²|                                   |
+| Temp at &alpha;=0  | XXXX                       | XXXX                        | XXXX                       | XXXX                       | &deg;C       |                                   |
+| Relative U, k=2    | 2.0                        | 2.0                         | 2.0                        | 2.0                        | &micro;V/V   | Within 1 week                     |
+
+## ADR1000AHZ module QVR4, four chips individual outputs, after trim
+
+## ADR1000AHZ module QVR4, four chips averaged
 
 ## ADR1000AHZ module QVR2, two chips, individual 6.62 V zener IC outputs
 
