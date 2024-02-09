@@ -34,6 +34,8 @@ Based on this instrumentation the following results were obtained:
 
 The first test is to measure voltage stability against temperature change of individual zener output for each of the two populated circuits on the QVR module PCBA. This is achieved by removing the connection to the averaging resistor network at the output of each cell and routing kelvin-connected 6.6 V to separate DMM. This way, it is possible to evaluate ADR1000 circuit performance without the effects of the output gain 10 V amplifier added. ADR1000s circuit temperature coefficient can be compensated and adjusted to very low numbers by multiple methods, such as changing series resistance to zener cathode terminal or adding a weak feedback from voltage loop to oven control loop (with series resistor in order 100 k&Omega; to 1 M&Omega; between heater transistor emitter and ADR1000 zener anode pin 4).
 
+![https://xdevs.com/doc/xDevs.com/QVRA/qvrq_ref_1.jpg](https://xdevs.com/doc/xDevs.com/QVRA/qvrq_ref.jpg)
+
 This PCBA was populated with four cells, each with own ADR1000 chip, opamps, resistors, heater transistor and all additional components. Each cell utilized OPA2140 opamp with temperature setpoint resistor divider VPG VHD200 11.5 k&Omega; | 1 k&Omega; and VPG VHP202 80 &Omega; for zener current setting.
 
 The module under test with dual ADR1000 zener IC swept multiple times from a wider +17.0 &deg;C to +55.0 &deg;C set temperature after initial warmup around 3 hours. Excessive maximum temperature was set deliberately to determine actual ADR1000 integrated oven thermal margin.
