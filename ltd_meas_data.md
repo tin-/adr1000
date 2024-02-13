@@ -21,11 +21,19 @@ Manufacturer long-term stability specifications can be used as a starting point 
 
 Ideally, measuring the long-term drift of the DUT's output voltage would require a significantly more stable reference so that a direct comparison could be done. Both ADR1000 and LTZ1000 are best chips that are commercially available capable to maintain stability better than 1 &micro;V/V, so better reference requirement implies direct comparison to Josephson Voltage Standard over a long duration of time. Such standard was not available for the duration of this study, so instead bank of well aged constantly-powered zener standards was utilized. Bank was calibrated multiple times on the Josehpson Voltage Standard to accurately determine long-term drift.
 
-All long-term stability study was performed on the [xDevs.com QVR evaluation module](https://xdevs.com/article/qvref).
+All long-term stability study was performed on the [xDevs.com QVR evaluation modules](https://xdevs.com/article/qvref). Three separate modules were used:
+
+* SN0002 : Single populated ADR1000 cell, ADA4522-2 output amplifier for 10V
+* SN0003 : Dual populated ADR1000 cells, ADA4522-2 output amplifier for 10V
+* SN0004 : Quad populated ADR1000 cells, OPA2182 output amplifier for 10V
+
+Overall block diagram of the module with fully populated four zener cells is shown below.
 
 ![Block diagram](https://xdevs.com/doc/xDevs.com/QVR/block_blk.png)
 
-Based on this instrumentation following results were obtained:
+Outputs of each zener cell is averaged with passive resistor network into combined low noise 6.6 V DC level, which is filtered and fed to zero-drift chopper amplifier with discrete bipolar trasistor output stage for current source/sink capability. Zener cells powered by low-noise LT3045 linear regulator, except heaters. Heaters were powered separately from direct DC input (usually +12.5 V ... +13 V). Output amplifier also powered directly from bipolar DC inputs (+12.5 V ... +13 V and -12.5 V ... -13 V). 
+
+Based on this setup and nanovoltmeter+scanner instrumentation following results were obtained:
 
 ![Long-term results](https://xdevs.com/doc/xDevs.com/QVRA/ltd_chart_10khrs_blk.png)
 
