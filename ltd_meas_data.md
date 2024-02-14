@@ -81,9 +81,35 @@ RAW data set with all measurement value is also available in Excel and CSV-forma
 
 ## Future work
 
-The study of long-term drift leaves some questions open, such as how oven set point temperature and zener current affect long-term drift, and require larger sample set to gain more confidence in results. In theory, higher current and higher temperature would cause drift rate to accelerate as well, but it's not so simple in the real world application. Experimental verification of these claims would be very useful and will be done at a later date. These initial results exhibit larger than expected 0.5 &;micro;V/V/year initial drift of new ADR1000 zener IC after first 6200 hours after power up and highlight importance of careful procedures and possible need of selection to obtain desired long term stability better than 1 &micro;V/V per year.
+The study of long-term drift leaves some questions open, such as how oven set point temperature and zener current affect long-term drift, and require larger sample set to gain more confidence in results. In theory, higher current and higher temperature would cause drift rate to accelerate as well, but it's not so simple in the real world application. Experimental verification of these claims would be very useful and will be done at a later date. These initial results exhibit larger than expected 0.5 &micro;V/V/year initial drift of new ADR1000 zener IC after first 6200 hours after power up and highlight importance of careful procedures and possible need of selection to obtain desired long term stability better than 1 &micro;V/V per year.
 
-Current setup is undergoing modification to include additional modules with new ICs and better setup to collect larger dataset for more detailed analysis in future.
+Current setup is undergoing modification to include additional modules with new ICs and better setup to collect larger dataset for more detailed analysis in future. Additional module was assembled fresh on February 11, 2024 with goal to run different chips in the same PCBA in same conditions and compare their long-term stability from first power on. 
+
+![LTD QVR module](https://xdevs.com/doc/xDevs.com/QVRL/img/block_ltdb.png)
+
+No magical special aging was performed on any of the chips. They sat on the shelf unused for some time and now just soldered on the board fresh.
+
+| **Parameter**        | **Cell A** | **Cell B** | **Cell C** | **Cell D** |
+| :------------------: | :-------: | :-------: | :-------: | :-------: |
+|Zener type            |  LTZ1000CH | LTZ1000ACH | ADR1000AHZ | ADR1000AHZ |
+|Date code             |   2128    | 2234 | 2333 | 1839 |
+|Temp setpoint         | 13 k&Omega; / 1 k&Omega; VHD200 | 13 k&Omega; / 1 k&Omega; VHD200 | 16.0674 k&Omega; / 1.3015 k&Omega; | 13 k&Omega; / 1 k&Omega; VHD200 |
+|Iz set resistor       |120 &Omega; VHP203T | 120 &Omega; VHP203T  | 80 &Omega; VHP202T | 100 &Omega; VHP202T |
+|Temp point voltage, V | 0.506 | 0.511 | 0.495 | 0.472 |
+|Iz voltage, measured V| 0.4240 | 0.429 | 0.4846 | 0.4734 |
+|Opamp                 | TI OPA2140 | TI OPA2140 | TI OPA2140 | TI OPA2140 |
+|Q1 resistor           | Susumu 68 k&Omega; | Susumu 68 k&Omega; | MELF 62 k&Omega; | MELF 62 k&Omega; |
+|Q2 resistor           | Susumu 68 k&Omega; | Susumu 68 k&Omega; | MELF 62 k&Omega; | MELF 62 k&Omega; |
+|FB capacitors         | 0.15 uF 1206 film  | 0.15 uF 1206 film  | 0.15 uF 1206 film  | 0.15 uF 1206 film  |
+|TC feedback           | 140 k&Omega; | 820 k&Omega; | 680 k&Omega; | 820 k&Omega; |
+|Noise, 0.1 Hz - 10 Hz | 895 nV pk-pk | 957 nV pk-pk | 367 nV pk-pk | 410 nV pk-pk |
+|[Output voltage, FEB.13.2024](https://xdevs.com/hp3458abc_k2002ltc_ltdqvr_qvrq_raw6v6fix_avg_tcr_40c_820kABD_trimmed10v_run_feb2024/) | 7.17232133 V | 7.09003609 V | 6.60987871 V | 6.62218042 V |
+
+![LTD Board photo](https://xdevs.com/doc/xDevs.com/QVRL/img/ltdqvr_top_1.jpg)
+
+Averaging of zener outputs is also unused (Z6 network is not populated), as only individual zener IC outputs will be monitored from this module. 
+
+![Setup with LTD QVR build](https://xdevs.com/doc/xDevs.com/QVRL/img/ltdqvr_resn_1.jpg)
 
 ## Other notable references
 
