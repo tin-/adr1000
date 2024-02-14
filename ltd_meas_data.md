@@ -97,6 +97,7 @@ No magical special aging was performed on any of the chips. They sat on the shel
 |Iz set resistor       |120 &Omega; VHP203T | 120 &Omega; VHP203T  | 80 &Omega; VHP202T | 100 &Omega; VHP202T |
 |Temp point voltage, V | 0.506 | 0.511 | 0.495 | 0.472 |
 |Iz voltage, measured V| 0.4240 | 0.429 | 0.4846 | 0.4734 |
+|Iz current, calculated| 3.53 mA | 3.57 mA | 6.06 mA | 4.73 mA |
 |Opamp                 | TI OPA2140 | TI OPA2140 | TI OPA2140 | TI OPA2140 |
 |Q1 resistor           | Susumu 68 k&Omega; | Susumu 68 k&Omega; | MELF 62 k&Omega; | MELF 62 k&Omega; |
 |Q2 resistor           | Susumu 68 k&Omega; | Susumu 68 k&Omega; | MELF 62 k&Omega; | MELF 62 k&Omega; |
