@@ -201,6 +201,8 @@ Data set table with all measurement values is also presented below for further a
 | LTZ1000CH chip 33            | 49 week 2016 | 966 nV                                 | 141 nV                       |
 | LTZ1000CH chip 34            | 49 week 2016 | 804 nV                                 | 75  nV                       |
 | QVR, 4 x LTZ1000ACH @ 6.62 V | 30 week 2019 | 442 nV                                 | 44 nV                        |
+| QVR, 4 x ADR1000AHZ @ 6.62 V | 39 week 2018 | 242 nV                                 | 40 nV                        |
+| QVR, 2 x ADR1000AHZ @ 6.62 V | 39 week 2018 | 378 nV                                 | 37 nV                        |
 | Fluke 732C @ 10 V            |  N/A         | 903 nV                                 | 84 nV                        |
 | Fluke 5720A/H1, @ 7.19 V     |  N/A         | 3790 nV                                | 512 nV                       |
 | Fluke 5720A/H2, @ 7.19 V     |  N/A         | 3704 nV                                | 480 nV                       |
