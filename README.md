@@ -4,11 +4,9 @@ Data repository for Analog Devices ADR1000-based xDevs.com module voltage standa
 Current Status
 --------------
 * Drift data collection/analysis : [437 days done, in progress](ltd_meas_data.md)
-* Data processing: in progress
 * Short-term noise evaluation: [done](lf_noise_data.md)
 * Tempco evaluation: [in progress](tc_setup.md)
-* PSRR evaluation: planned
-* Power on/off hysteresis evaluation: planned
+* PSRR evaluation: planned Q2'2024
 
 Introduction
 ------------
@@ -23,3 +21,5 @@ Issues and caveats
 2. Long-term drift data for single-chip QVR ADR1000 module is based on combined drift from ADR1000 cell and 6.62V>10V output boost stage. Long-term drift data for multi-chip QVR ADR1000 module is based on averaged output of 6.62V cells without boost stage. All LTZ1000A-based devices data based on boosted 10V output.
 
 3. Thermal coefficient and humidity coefficient contributors are not removed from the long-term drift data.
+
+4. Temperature coefficient measurements were done based on long-scale DMM setup with larger uncertainties, compared to long-term drift array setup.
