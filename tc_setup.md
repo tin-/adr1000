@@ -38,7 +38,9 @@ The first test is to measure voltage stability against temperature change of ind
 
 This PCBA was populated with four cells, each with own ADR1000 chip, opamps, resistors, heater transistor and all additional components. Each cell utilized OPA2140 opamp with temperature setpoint resistor divider VPG VHD200 11.5 k&Omega; | 1 k&Omega; and VPG VHP202 80 &Omega; for zener current setting.
 
-The module under test with dual ADR1000 zener IC swept multiple times from a wider +17.0 &deg;C to +55.0 &deg;C set temperature after initial warmup around 3 hours. Excessive maximum temperature was set deliberately to determine actual ADR1000 integrated oven thermal margin.
+![QVR4 Block diagram](https://xdevs.com/doc/xDevs.com/QVR/block_blk.png)
+
+The module under test with quad ADR1000 zener ICs swept multiple times from a wider +17.0 &deg;C to +55.0 &deg;C set temperature after initial warmup around 3 hours. Excessive maximum temperature was set deliberately to determine actual ADR1000 integrated oven thermal margin.
 
 [RAW-data file with 40-53 temperature range in CSV](https://github.com/tin-/adr1000/blob/main/raw/hp3458abc_k2002ltc_qvrq_raw6v6_tcr_pretrim_run_feb2024_40-53.csv)
 
@@ -51,7 +53,7 @@ The test module was powered by linear triple channel power supply and output dig
 
 This data gives about 2...5 degree margin room between ambient temperature to calculated oven set point +51.0 °C which is pretty close to expected deviation. Some of the heat from the onboard oven is lost in thermal dissipation into PCB, cover and air around the chip, since ADR1000 does not use thermal insulation glass balls like the LTZ1000ACH. To be safe in a practical circuit, it would be reasonable to maintain at least 10 ° margin between maximum acceptable ambient/module temperature and actual ADR1000 oven temperature set point. For the completeness, here's calculated temperature coefficients with zener outside the temperature range with ambient temperature above oven set point.
 
-| **Dual module**    | **CELL A**    | **CELL B**    | **CELL C**   | **CELL D**   | **Unit**     | **Notes**         |
+| **QVR4 module**    | **CELL A**    | **CELL B**    | **CELL C**   | **CELL D**   | **Unit**     | **Notes**         |
 | :------------:     | :-----------:  | :-----------:  | :-----------:   | :-----------:  | :--------:   | :-------------------------------: |
 | Temperature range  | 50-53 | 50-53 | 50-53 | 50-53 | &deg;C | Out of temperature data |
 | 1st fit const      | -1.31376006E-03 | -1.11909944E-03 | -2.00939698E-03 | -1.94526833E-03 |              |  |
@@ -66,7 +68,7 @@ In the temperature range +23 &deg;C to +40 &deg;C, which is within the safe marg
 
 [RAW-data file with 23-40 temperature range in CSV](https://github.com/tin-/adr1000/blob/main/raw/hp3458abc_k2002ltc_qvrq_raw6v6_tcr_pretrim_run_feb2024_23_40.csv)
 
-| **Dual module**    | **CELL A**    | **CELL B**    | **CELL C**   | **CELL D**   | **Unit**     | **Notes**                         |
+| **QVR4 module**    | **CELL A**    | **CELL B**    | **CELL C**   | **CELL D**   | **Unit**     | **Notes**                         |
 | :------------:     | :-----------:  | :-----------:  | :-----------:   | :-----------:  | :--------:   | :-------------------------------: |
 | Calibration date   | FEB/8/2024     | FEB/8/2024     | FEB/8/2024      | FEB/8/2024     |              | +23 &deg;C ambient, by 3458+2002 group |
 | Reference Temp T   |       23.00    |       23.00    |       23.00     |       23.00    | &deg;C       |                                   |
@@ -85,6 +87,49 @@ Cell D temperature coefficient is not too bad, but all the other cells require a
 ## ADR1000AHZ module QVR4, four chips individual outputs, after trim
 
 ## ADR1000AHZ module QVR4, four chips averaged
+
+## LTD-QVR module with mixed zeners, four chips individual outputs, with trim
+
+Additional module was assembled fresh on February 11, 2024 with goal to run different chips in the same PCBA in same conditions and compare their long-term stability from first power on. 
+
+![LTD QVR module](https://xdevs.com/doc/xDevs.com/QVRL/img/block_ltdb.png)
+
+No magical special aging was performed on any of the chips. They sat on the shelf unused for some time and now just soldered on the board fresh.
+
+| **Parameter**        | **Cell A** | **Cell B** | **Cell C** | **Cell D** |
+| :------------------: | :-------: | :-------: | :-------: | :-------: |
+|Zener type            |  LTZ1000CH | LTZ1000ACH | ADR1000AHZ | ADR1000AHZ |
+|Date code             |   2128    | 2234 | 2333 | 1839 |
+|Temp setpoint         | 13 k&Omega; / 1 k&Omega; VHD200 | 13 k&Omega; / 1 k&Omega; VHD200 | 16.0674 k&Omega; / 1.3015 k&Omega; | 13 k&Omega; / 1 k&Omega; VHD200 |
+|Iz set resistor       |120 &Omega; VHP203T | 120 &Omega; VHP203T  | 80 &Omega; VHP202T | 100 &Omega; VHP202T |
+|Temp point voltage, V | 0.506 | 0.511 | 0.495 | 0.472 |
+|Iz voltage, measured V| 0.4240 | 0.429 | 0.4846 | 0.4734 |
+|Iz current, calculated| 3.53 mA | 3.57 mA | 6.06 mA | 4.73 mA |
+|Opamp                 | TI OPA2140 | TI OPA2140 | TI OPA2140 | TI OPA2140 |
+|Q1 resistor           | Susumu 68 k&Omega; | Susumu 68 k&Omega; | MELF 62 k&Omega; | MELF 62 k&Omega; |
+|Q2 resistor           | Susumu 68 k&Omega; | Susumu 68 k&Omega; | MELF 62 k&Omega; | MELF 62 k&Omega; |
+|FB capacitors         | 0.15 uF 1206 film  | 0.15 uF 1206 film  | 0.15 uF 1206 film  | 0.15 uF 1206 film  |
+|TC feedback           | 150 k&Omega; | 820 k&Omega; | 334 k&Omega; | 820 k&Omega; |
+|Noise, 0.1 Hz - 10 Hz | 895 nV pk-pk | 957 nV pk-pk | 367 nV pk-pk | 410 nV pk-pk |
+|[Output voltage, FEB.13.2024](https://xdevs.com/hp3458abc_k2002ltc_ltdqvr_qvrq_raw6v6fix_avg_tcr_40c_820kABD_trimmed10v_run_feb2024/) | 7.17232133 V | 7.09003609 V | 6.60987871 V | 6.62218042 V |
+
+![LTD Board photo](https://xdevs.com/doc/xDevs.com/QVRL/img/ltdqvr_top_1.jpg)
+
+| **LTD-QVR module** | **CELL A**    | **CELL B**    | **CELL C**   | **CELL D**   | **Unit**     | **Notes**                         |
+| :------------:     | :-----------:  | :-----------:  | :-----------:   | :-----------:  | :--------:   | :-------------------------------: |
+| Zener type         |  LTZ1000CH | LTZ1000ACH | ADR1000AHZ | ADR1000AHZ |
+| Date code          |   2128    | 2234 | 2333 | 1839 |
+| Calibration date   | FEB/16/2024    | FEB/16/2024    | FEB/16/2024     | FEB/16/2024    |              | +23 &deg;C ambient, by 3458+2002 group |
+| Reference Temp T   |       23.00    |       23.00    |       23.00     |       23.00    | &deg;C       |                                   |
+| Nominal output     | 7.2            | 7.1            | 6.6             | 6.6            | V            | |
+| 1st fit const      | xxxxxxxxxxxxxxx | xxxxxxxxxxxxxxx | xxxxxxxxxxxxxxx | xxxxxxxxxxxxxxx |              |                                   |
+| 2nd fit const      | xxxxxxxxxxxxxx | xxxxxxxxxxxxxx | xxxxxxxxxxxxxx  | xxxxxxxxxxxxxx |              |                                   |
+| Gain const         | xxxxxxxxxx     | xxxxxxxxxx     | xxxxxxxxxx      | xxxxxxxxxx     | V            |                                   |
+| EMF, T₂₃           | **xxxxxxxxx**  | **xxxxxxxxx**  | **xxxxxxxxx**   | **xxxxxxxxx**  | V            |                                   |
+| &alpha; T₂₃        | xxxxxxx        | xxxxxxx        | xxxxxxx         | xxxxxxx        | &micro;V/V/K |                                   |
+| &beta;             | xxxxxx         | xxxxxx         | xxxxxx          | xxxxxx         | &micro;V/V/K²|                                   |
+| Temp at &alpha;=0  | xxxx           | xxxxx          | xxxxx           | xxxx           | &deg;C       |                                   |
+| Relative U, k=2    | 4.0            | 2.0            | 2.0             | 2.0            | &micro;V/V   | Within 1 week                     |
 
 ## ADR1000AHZ module QVR2, two chips, individual 6.62 V zener IC outputs
 
@@ -218,7 +263,29 @@ Output is amplified to +10 V with thin film NiCr resistor network and precision 
 
 This prototype LTZ1000ACH-based reference demonstrated excellent temperature stability after trimming and adjustment.  Final temperature coefficients determined as &alpha; = -0.0068 &micro;V/V/K ; &beta; = +0.0032 &micro;V/V/K² and zero TCR intersection crossover point calculated at *+24.1 &deg;C*. Summary table presented above as well.
 
-## LTZ1000ACH "FX" prototype S/N 001, trimmed 10V output
+## LTZ1000ACH "FX" for USA Calibration Club, trimmed 10V output
+
+The module labelled [xDevs FX](https://xdevs.com/article/792x/) donated for USA Calibration club metrology enthusiasts is populated with single LTZ1000A zener IC and VHP resistors. It was swept multiple times from +18.0 &deg;C to +28.5 &deg;C set temperature during validation and calibration steps. The test module was powered by Fluke 792A battery pack and output digitized by [HP3458A DVM](https://xdevs.com/fix/hp3458a) continuously. This FX module utilized LTC1013 opamp with temperature setpoint resistor divider VPG VHD200 13 k&Omega; | 1 k&Omega; and VPG VHP202 120 &Omega; for zener current setting. 
+
+![USAC FX Tempco data](https://xdevs.com/doc/xDevs.com/FX/usac/usac_fx_tc_jan2023.png)
+
+| **USA Club module**    | **Parameter**   | **Unit**     | **Notes**                         |
+| :-----------:      | :-----------:   | :----------: | :-------------------------------: |
+| Calibration date   | JAN/15/2023     |              | +23 &deg;C ambient, by 3458A      |
+| Reference Temp T   |       23.00     | &deg;C       |                                   |
+| Nominal output     | 10.000000       | V            |                                   |
+| 1st fit const      | 2.59343E-9      |              |                                   |
+| 2nd fit const      | -3.61039E-7     |              |                                   |
+| Gain const         | 9.9999691       | V            |                                   |
+| EMF, T₂₃           | **9.99996217**  | V            |                                   |
+| &alpha; T₂₃        | -0.0242         | &micro;V/V/K |                                   |
+| &beta;             | +0.0003         | &micro;V/V/K²|                                   |
+| Temp at &alpha;=0  | 69.6            | &deg;C       |                                   |
+| Relative U, k=2    | 0.55            | &micro;V/V   | Within 24 hours                   |
+
+Module again demonstrated excellent temperature stability on the 10 V output after trimming and adjustment process.  Final temperature coefficients determined as &alpha; = -0.0242 &micro;V/V/K ; &beta; = +0.0003 &micro;V/V/K² and zero TCR intersection crossover point calculated at *+69.6 &deg;C*. Summary table presented above as well.
+
+## LTZ1000ACH "FX" prototype S/N "Echo", trimmed 10V output
 
 Same design module was built with codename "Echo" as well with similar trimming and components used. This reference module utilized LTC1013 opamp with temperature setpoint resistor divider VPG VHD200 13 k&Omega; | 1 k&Omega; and VPG VHP202 120 &Omega; for zener current setting. 
 
@@ -258,8 +325,9 @@ Data set table with all measurement values is also presented below for further a
 | Quad ADR1000 module, cell D, pretrim |  6.6396817 V   | -0.0765 &micro;V/V/K   | +0.0006 &micro;V/V/K²      | +83.2 &deg;C | FEB/8/2024     |
 | Dual ADR1000 module, cell 1, trimmed |  6.6236211 V   | -0.0168 &micro;V/V/K   | +0.0008 &micro;V/V/K²      | +33.0 &deg;C | JAN/23/2024    |
 | Dual ADR1000 module, cell 2, trimmed |  6.6268250 V   | -0.0325 &micro;V/V/K   | +0.0018 &micro;V/V/K²      | +31.8 &deg;C | JAN/23/2024    |
-| Dual ADR1000 module, trimmed | 10.0003886 V   | -0.0400 &micro;V/V/K   | +0.0017 &micro;V/V/K²      | +27.3 &deg;C | FEB/4/2024     |
+| Dual ADR1000 module, 10V, trimmed | 10.0003886 V   | -0.0400 &micro;V/V/K   | +0.0017 &micro;V/V/K²      | +27.3 &deg;C | FEB/4/2024     |
 | Single ADR1000 module          | xx.xxxxxxx V   | xx.xxxx &micro;V/V/K   | xx.xxxx &micro;V/V/K²      | +xx.x &deg;C | xxx/x/2024     |
 | Single LTZ1000A module S/N 001 | 10.0000115 V   | -0.0068 &micro;V/V/K   | +0.0032 &micro;V/V/K²      | +24.1 &deg;C | OCT/21/2022    |
+| Single LTZ1000A module S/N USAC | 9.9999622 V   | -0.0242 &micro;V/V/K   | +0.0003 &micro;V/V/K²      | +69.6 &deg;C | JAN/15/2023    |
 | Single LTZ1000A module S/N Echo | 9.9999569 V   | +0.0038 &micro;V/V/K   | +0.0003 &micro;V/V/K²      | +16.1 &deg;C | MAY/19/2019    |
 
