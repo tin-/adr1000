@@ -39,7 +39,7 @@ Better approach is to perform the comparison of voltage differential in series o
 
 This method is also what Fluke recommends performing calibration of their own 732B/C standards. In fact, even in Josephson Voltage standard system such as [NIST SRI 6000](https://www.nist.gov/sri/standard-reference-instruments/sri-6000-series-programmable-josephson-voltage-standard-pjvs) or [Supracon](http://www.supracon.com/files/online/NormaleSpannungsnormal/AC_QuantumVoltmeter_cooler.pdf) the calibration of unknown source or DC standard is done in very same manner. JVS array +10 V output configured as quantum-accurate noiseless level and connected in opposite to the compared zener, with commercial nanovoltmeter like HP 34420A measuring difference in nanovolts. This provides a direct link to intrinsic realization of the voltage, limited only by quality of the scanner/switching system, parasitic EMFs and nanovoltmeter detector short-term noise. Any gain and linearity errors of the nanovoltmeter can be easily calibrated and cancelled out with programmable JVS array output as well.
 
-Based on similar setup and 2182A nanovoltmeter + DP160A scanner instrumentation following results were obtained:
+Based on similar setup and 2182A nanovoltmeter + DP160A scanner instrumentation following results were obtained. Tests were performed on both 6.6V zener output voltage and with scaled 10V output voltages.
 
 ![Long-term results](https://xdevs.com/doc/xDevs.com/QVRA/ltd_chart_10khrs_blk.png)
 
