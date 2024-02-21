@@ -4,9 +4,9 @@
 
 Total number of devices evaluated in this test:
 
-* References with ADR1000AHZ manufactured with date code 39 week 2018, 4 units
-* References with LTZ1000ACH#PBF production devices - 2 units
-* xDevs.com QVR device with four LTZ1000ACH averaged with passive resistor network - 1 unit
+* Reference with ADR1000AHZ production devices, 8 units
+* Reference with LTZ1000ACH#PBF production devices - 4 units
+* Reference with LTZ1000CH#PBF production devices - 1 units
 
 Temperature is a large factor and possible measurement error contributor of the laboratory instrument. Amplitude of temperature-related output change determines temperature coefficient and depends on many design features, such as materials, power distribution, physical layout and electrical circuit design. Minimizing temperature coefficient can be achieved by using material junctions with low parasitic EMF, careful thermal design with optimized uniformity and active heating/cooling stabilization.
 
@@ -60,7 +60,7 @@ This data gives about 2...5 degree margin room between ambient temperature to ca
 | 2nd fit const      | 4.35502247E-06  | 2.18797005E-06  | 1.08683322E-05  | 9.95157673E-06  |              |  |
 | Gain const         | 6.69299635      | 6.68675020      | 6.71047532      | 6.70819104      | V            |  |
 | EMF, T₂₃           | **6.6650837**   | **6.6621683**   | **6.6700085**   | **6.6687143**   | V            |  |
-| &alpha; T₂₃        | -167.05         | -152.87         | -226.31         | -223.06         | &micro;V/V/K |  |
+| &alpha; T₂₃        | -167.0          | -152.9          | -226.3          | -223.1         | &micro;V/V/K |  |
 | &beta;             | +0.654          | +0.328          | +1.629          | +1.492          | &micro;V/V/K²|  |
 | Temp at &alpha;=0  | +150.8          | +255.7          | +92.4           | +97.7           | &deg;C       |  |
 
@@ -77,16 +77,68 @@ In the temperature range +23 &deg;C to +40 &deg;C, which is within the safe marg
 | 2nd fit const      | 1.54335922E-08 | 4.20163160E-09 | 1.13442137E-08  | 4.22027591E-09 |              |                                   |
 | Gain const         | 6.63889998     | 6.63667779     | 6.63802227      | 6.63969562     | V            |                                   |
 | EMF, T₂₃           | **6.6388387**  | **6.6366351**  | **6.6379706**   | **6.6396817**  | V            |                                   |
-| &alpha; T₂₃        | -0.3478        | -0.2652        | -0.2991         | -0.0765        | &micro;V/V/K |                                   |
+| &alpha; T₂₃        | -0.348        | -0.265        | -0.299         | -0.077        | &micro;V/V/K |                                   |
 | &beta;             | 0.0023         | 0.0006         | 0.0017          | 0.0006         | &micro;V/V/K²|                                   |
 | Temp at &alpha;=0  | 97.8           | 232.4          | 110.5           | 83.2           | &deg;C       |                                   |
 | Relative U, k=2    | 2.0            | 2.0            | 2.0             | 2.0            | &micro;V/V   | Within 1 week                     |
 
 Cell D temperature coefficient is not too bad, but all the other cells require additional trimming to reduce temperature coefficient.
 
-## ADR1000AHZ module QVR4, four chips individual outputs, after trim
+## ADR1000AHZ module QVR4, four chips individual outputs, after initial trim adjustment.
 
-## ADR1000AHZ module QVR4, four chips averaged
+| **QVR4 module**    | **CELL A**     | **CELL B**     | **CELL C**      | **CELL D**     | **Unit**     | **Notes**                         |
+| :------------:     | :-----------:  | :-----------:  | :-----------:   | :-----------:  | :--------:   | :-------------------------------: |
+| Calibration date   | FEB/11/2024     | FEB/11/2024     | FEB/11/2024      | FEB/11/2024     |              | +23 &deg;C ambient, by 3458+2002 group |
+| Reference Temp T   |       23.00    |       23.00    |       23.00     |       23.00    | &deg;C       |                                   |
+| Nominal output     | 6.63           | 6.63           | 6.63            | 6.63           | V            | 5 mA, +51 &deg;C 11.5k&Omega;/1k&Omega;|
+| 1st fit const      | -2.48175569E-06 | -1.24945688E-06 | -1.34764669E-06|1.76872052E-07 |              |                                   |
+| 2nd fit const      | 2.83384964E-08 | 1.09828671E-08 | -4.83837992E-09 | 8.21298629E-09 |              |                                   |
+| Gain const         | 6.63882612     | 6.63660698     | 6.63798730      | 6.63962816     | V            |                                   |
+| EMF, T₂₃           | **6.6387840**  | **6.6365841**  | **6.6379537**   | **6.6396366**  | V            |                                   |
+| &alpha; T₂₃        | -0.178         | -0.112         | -0.237          | +0.084         | &micro;V/V/K |                                   |
+| &beta;             | +0.004         | +0.002         | -0.001          | +0.0012        | &micro;V/V/K²|                                   |
+| Temp at &alpha;=0  | +43.8          | +56.9          | -139.3          | -10.8          | &deg;C       |                                   |
+| Relative U, k=2    | 2.0            | 2.0            | 2.0             | 2.0            | &micro;V/V   | Within 1 week                     |
+
+This run produced better temperature stability for cells A,B,C and similar performance of Cell D. Now if we combine all the cell outputs together with amplifier to get 10 V nominal output temperature coefficient of boost stage will also interact with the circuit performance.
+
+Overall amplifier 10 V output temperature stability shown in table below as well:
+
+| **QVR4-SN04 module**   | **Parameter**   | **Unit**     | **Notes**                     |
+| :-----------:      | :-----------:   | :----------: | :-------------------------------: |
+| Calibration date   | FEB/12/2022     |              | +23 &deg;C ambient, by 3458A      |
+| Reference Temp T   |       23.00     | &deg;C       |                                   |
+| Nominal output     | 10.000000       | V            |                                   |
+| 1st fit const      | 1.25148561E-06  |              |                                   |
+| 2nd fit const      | -1.88555793E-08 |              |                                   |
+| Gain const         | 10.0270350      | V            |                                   |
+| EMF, T₂₃           | **10.0270538**  | V            |                                   |
+| &alpha; T₂₃        | +0.038          | &micro;V/V/K |                                   |
+| &beta;             | -0.002          | &micro;V/V/K²|                                   |
+| Temp at &alpha;=0  | +33.2            | &deg;C       |                                  |
+| Relative U, k=2    | 1.5             | &micro;V/V   | Within 24 hours                   |
+
+Now this result is pretty good and on par with the typical adjusted and well behaved LTZ1000-based zener reference.
+
+## ADR1000AHZ module QVR4, four chips averaged, trimmed and amplified for 10 V output
+
+Temperature coefficient is sorted out to acceptable level, but output 10 V gain stage still require adjustment of it's large +2705 &micro;V/V offset. It's not particularly important for long-term study but it's more convinient to have 10 V output closer to the nominal value. This offset adjustment is accomplished by populating additional 80 &Omega; BMF resistor in the output divider feedback circuit for final amplifier. To ensure that output temperature stability did not suffer significantly one more sweep was done with two different digitizers.
+
+| **QVR4-SN04 module**    | **Parameter DMM1** | **Parameter DMM2**  | **Unit**     | **Notes**                         |
+| :------------:     | :-----------:              | :-----------:               | :--------:   | :-------------------------------: |
+| Calibration date   | JAN/15/2024                | JAN/15/2024                 |              | +23 &deg;C ambient, by 3458 group |
+| Reference Temp T   |       23.00                |       23.00                 | &deg;C       |                                   |
+| Nominal output     | 10                         | 10                          | V            | 5 mA, +51 &deg;C 11.5k&Omega;/1k&Omega;|
+| 1st fit const      | -8.40367309E-07            | -1.10993756E-06             |              |                                   |
+| 2nd fit const      | 9.74887560E-09             | 1.42193184E-08              |              |                                   |
+| Gain const         | 10.0002079                 | 10.0002010                  | V            |                                   |
+| EMF, T₂₃           | **10.0001937**             | **10.0001830**              | V            |                                   |
+| &alpha; T₂₃        | -0.039                     | -0.046                      | &micro;V/V/K |                                   |
+| &beta;             | +0.001                     | +0.001                      | &micro;V/V/K²|                                   |
+| Temp at &alpha;=0  | +43.0                      | +39.0                       | &deg;C       |                                   |
+| Relative U, k=2    | 2.0                        | 2.0                         | &micro;V/V   | Within 1 week                     |
+
+Now output offset is only +19.4 and +18.3 &micro;V/V according to DMM1 and DMM2 with temperature coefficient almost unchanged. This was considered acceptable result and quad ADR1000 reference at this point was returned back into the zener array bank to continue long-term drift measurements.
 
 ## LTD-QVR module with mixed zeners, four chips individual outputs, with trim
 
@@ -94,7 +146,7 @@ Additional module was assembled fresh on February 11, 2024 with goal to run diff
 
 ![LTD QVR module](https://xdevs.com/doc/xDevs.com/QVRL/img/block_ltdb.png)
 
-No magical special aging was performed on any of the chips. They sat on the shelf unused for some time and now just soldered on the board fresh.
+No special aging was performed on any of the chips. They sat on the shelf with normal environment conditions unused for some time and now just soldered on the board fresh.
 
 | **Parameter**        | **Cell A** | **Cell B** | **Cell C** | **Cell D** |
 | :------------------: | :-------: | :-------: | :-------: | :-------: |
@@ -119,16 +171,16 @@ No magical special aging was performed on any of the chips. They sat on the shel
 | :------------:     | :-----------:  | :-----------:  | :-----------:   | :-----------:  | :--------:   | :-------------------------------: |
 | Zener type         |  LTZ1000CH | LTZ1000ACH | ADR1000AHZ | ADR1000AHZ |
 | Date code          |   2128    | 2234 | 2333 | 1839 |
-| Calibration date   | FEB/16/2024    | FEB/16/2024    | FEB/16/2024     | FEB/16/2024    |              | +23 &deg;C ambient, by 3458+2002 group |
+| Calibration date   | FEB/19/2024    | FEB/19/2024    | FEB/19/2024     | FEB/19/2024    |              | +23 &deg;C ambient, by 3458+2002 group |
 | Reference Temp T   |       23.00    |       23.00    |       23.00     |       23.00    | &deg;C       |                                   |
 | Nominal output     | 7.2            | 7.1            | 6.6             | 6.6            | V            | |
-| 1st fit const      | xxxxxxxxxxxxxxx | xxxxxxxxxxxxxxx | xxxxxxxxxxxxxxx | xxxxxxxxxxxxxxx |              |                                   |
-| 2nd fit const      | xxxxxxxxxxxxxx | xxxxxxxxxxxxxx | xxxxxxxxxxxxxx  | xxxxxxxxxxxxxx |              |                                   |
-| Gain const         | xxxxxxxxxx     | xxxxxxxxxx     | xxxxxxxxxx      | xxxxxxxxxx     | V            |                                   |
-| EMF, T₂₃           | **xxxxxxxxx**  | **xxxxxxxxx**  | **xxxxxxxxx**   | **xxxxxxxxx**  | V            |                                   |
-| &alpha; T₂₃        | xxxxxxx        | xxxxxxx        | xxxxxxx         | xxxxxxx        | &micro;V/V/K |                                   |
-| &beta;             | xxxxxx         | xxxxxx         | xxxxxx          | xxxxxx         | &micro;V/V/K²|                                   |
-| Temp at &alpha;=0  | xxxx           | xxxxx          | xxxxx           | xxxx           | &deg;C       |                                   |
+| 1st fit const      | -6.08942644E-7 | -2.69394074E-7 | -1.38040750E-6  | -2.38373960E-7 |              |                                   |
+| 2nd fit const      | 1.01014981E-8  | 6.90660107E-9  | 2.25354089E-8   | 2.79159473E-9  |              |                                   |
+| Gain const         | 7.08991929     | 7.17232774     | 6.60991308      | 6.62209037     | V            |                                   |
+| EMF, T₂₃           | **7.0899106**  | **7.1723252**  | **6.6098933**   | **6.6220864**  | V            |                                   |
+| &alpha; T₂₃        | -0.020        | +0.007        | -0.052          | -0.017        | &micro;V/V/K |                                   |
+| &beta;             | +0.0014        | +0.0010        | +0.0034         | +0.0004        | &micro;V/V/K²|                                   |
+| Temp at &alpha;=0  | +30.1          | +19.5          | +30.6           | +42.7          | &deg;C       |                                   |
 | Relative U, k=2    | 4.0            | 2.0            | 2.0             | 2.0            | &micro;V/V   | Within 1 week                     |
 
 ## ADR1000AHZ module QVR2, two chips, individual 6.62 V zener IC outputs
@@ -152,7 +204,7 @@ Summary table presented below.
 | 2nd fit const      | 5.56469404E-9              | 1.21919328E-8               |              |                                   |
 | Gain const         | 6.62362660                 | 6.62683645                  | V            |                                   |
 | EMF, T₂₃           | **6.6236211**              | **6.6268250**               | V            |                                   |
-| &alpha; T₂₃        | -0.0168                    | -0.0325                     | &micro;V/V/K |                                   |
+| &alpha; T₂₃        | -0.017                     | -0.033                     | &micro;V/V/K |                                   |
 | &beta;             | +0.0008                    | +0.0018                     | &micro;V/V/K²|                                   |
 | Temp at &alpha;=0  | 33.0                       | 31.8                        | &deg;C       |                                   |
 | Relative U, k=2    | 2.0                        | 2.0                         | &micro;V/V   | Within 1 week                     |
@@ -186,7 +238,7 @@ The temperature sweep rate varied from 0.1 &deg;C to 0.04 &deg;C/minute to verif
 | 2nd fit const      | 1.74072180E-8  |              |                                   |
 | Gain const         | 10.0004070     | V            |                                   |
 | EMF, T₂₃           | **10.0003886** | V            |                                   |
-| &alpha; T₂₃        | -0.0400        | &micro;V/V/K |                                   |
+| &alpha; T₂₃        | -0.040        | &micro;V/V/K |                                   |
 | &beta;             | +0.0017        | &micro;V/V/K²|                                   |
 | Temp at &alpha;=0  | 34.5           | &deg;C       |                                   |
 | TC, BOX, 18-28     | -0.0332        | &micro;V/V/K |                                   |
@@ -219,7 +271,7 @@ The temperature sweep rate varied from 0.1 &deg;C to 0.04 &deg;C/minute to verif
 | 2nd fit const      | 6.0919734E-8   |              |                                   |
 | Gain const         | 10.0000675     | V            |                                   |
 | EMF, T₂₃           | **10.0000255** | V            |                                   |
-| &alpha; T₂₃        | -0.0520        | &micro;V/V/K |                                   |
+| &alpha; T₂₃        | -0.052        | &micro;V/V/K |                                   |
 | &beta;             | +0.0061        | &micro;V/V/K²|                                   |
 | Temp at &alpha;=0  | 27.3           | &deg;C       |                                   |
 | TC, BOX, 18-28     | -0.065         | &micro;V/V/K | In heating direction              |
@@ -232,10 +284,6 @@ Temperature chart in the programmable air-bath sensor, placed next to the DUT mo
 Environmental parameters such as ambient temperature, pressure and humidity were monitored by [Bosch BME280-based sensor](https://xdevs.com/guide/thp_rpi/), digitized directly with Raspberry Pi 3B I2C interface bus. This sensor provided reference data to ensure that ambient conditions were stable and within short-term 24-hour stability specifications of used DVMs. Overall ambient temperature change during the whole test duration was recorded at 0.36 &deg;C. No additional correction to DMM temperature coefficient applied.
 
 ![](https://xdevs.com/doc/xDevs.com/QVRA/qvr_adr1_10v_env_time_blk.png)
-
-## LTZ1000ACH "FX" unit S/N 002 
-
-TBD
 
 ## LTZ1000ACH "FX" prototype S/N 001, trimmed 10V output
 
@@ -256,7 +304,7 @@ Output is amplified to +10 V with thin film NiCr resistor network and precision 
 | 2nd fit const      | 3.17024164E-08  |              |                                   |
 | Gain const         | 10.0000298      | V            |                                   |
 | EMF, T₂₃           | **10.0000115**  | V            |                                   |
-| &alpha; T₂₃        | -0.0068         | &micro;V/V/K |                                   |
+| &alpha; T₂₃        | -0.007         | &micro;V/V/K |                                   |
 | &beta;             | +0.0032         | &micro;V/V/K²|                                   |
 | Temp at &alpha;=0  | 24.1            | &deg;C       |                                   |
 | Relative U, k=2    | 1.5             | &micro;V/V   | Within 24 hours                   |
@@ -278,7 +326,7 @@ The module labelled [xDevs FX](https://xdevs.com/article/792x/) donated for USA 
 | 2nd fit const      | -3.61039E-7     |              |                                   |
 | Gain const         | 9.9999691       | V            |                                   |
 | EMF, T₂₃           | **9.99996217**  | V            |                                   |
-| &alpha; T₂₃        | -0.0242         | &micro;V/V/K |                                   |
+| &alpha; T₂₃        | -0.024         | &micro;V/V/K |                                   |
 | &beta;             | +0.0003         | &micro;V/V/K²|                                   |
 | Temp at &alpha;=0  | 69.6            | &deg;C       |                                   |
 | Relative U, k=2    | 0.55            | &micro;V/V   | Within 24 hours                   |
@@ -298,36 +346,38 @@ Same design module was built with codename "Echo" as well with similar trimming 
 | 2nd fit const      | 2.765246E-09    |              |                                   |
 | Gain const         | 9.9999575       | V            |                                   |
 | EMF, T₂₃           | **9.9999569**   | V            |                                   |
-| &alpha; T₂₃        | +0.0038         | &micro;V/V/K |                                   |
+| &alpha; T₂₃        | +0.004         | &micro;V/V/K |                                   |
 | &beta;             | +0.0003         | &micro;V/V/K²|                                   |
 | Temp at &alpha;=0  | 16.1            | &deg;C       |                                   |
 | Relative U, k=2    | 4.1             | &micro;V/V   | Within 24 hours                   |
 
 Module demonstrated excellent temperature stability on the 10 V output after trimming and adjustment process.  Final temperature coefficients determined as &alpha; = +0.0038 &micro;V/V/K ; &beta; = +0.0003 &micro;V/V/K² and zero TCR intersection crossover point calculated at *+16.1 &deg;C*. Summary table presented above as well.
 
-## HP 3458A unit 1, A9 LTZ1000ACH module voltage
-
-TBD
-
-## HP 3458A unit 2, A9 LTZ1000ACH module voltage
-
-TBD
-
 New Analog Devices ADR1000AHZ device in a typical application circuit can indeed demonstrate temperature stability better than &plusmn;0.05 &micro;V/V/K given the adequate parts selection. This is similar to LTZ1000/LTZ1000A solution which was proven by decades of operation in magnitude of design variations and commercial instruments.
 
-Data set table with all measurement values is also presented below for further analysis. 
+Data set table with all measurement values is also presented below for a summary overview.
 
 | **Device under test**          | **Output**     | **&alpha; T₂₃**        | **&beta;**                 | Zero &alpha; temperature | **Test date**  |
 | :------------                  | :-----------:  | :--------------------: | :------------------------: | :----: | :------------: |
-| Quad ADR1000 module, cell A, pretrim |  6.6388387 V   | -0.3478 &micro;V/V/K   | +0.0023 &micro;V/V/K²      | +97.8 &deg;C | FEB/8/2024     |
-| Quad ADR1000 module, cell B, pretrim |  6.6366351 V   | -0.2652 &micro;V/V/K   | +0.0006 &micro;V/V/K²      | +232 &deg;C | FEB/8/2024     |
-| Quad ADR1000 module, cell C, pretrim |  6.6379706 V   | -0.2991 &micro;V/V/K   | +0.0017 &micro;V/V/K²      | +110.5 &deg;C | FEB/8/2024     |
-| Quad ADR1000 module, cell D, pretrim |  6.6396817 V   | -0.0765 &micro;V/V/K   | +0.0006 &micro;V/V/K²      | +83.2 &deg;C | FEB/8/2024     |
-| Dual ADR1000 module, cell 1, trimmed |  6.6236211 V   | -0.0168 &micro;V/V/K   | +0.0008 &micro;V/V/K²      | +33.0 &deg;C | JAN/23/2024    |
-| Dual ADR1000 module, cell 2, trimmed |  6.6268250 V   | -0.0325 &micro;V/V/K   | +0.0018 &micro;V/V/K²      | +31.8 &deg;C | JAN/23/2024    |
+| Quad ADR1000 module, cell A, pretrim |  6.6388387 V   | -0.348 &micro;V/V/K   | +0.0023 &micro;V/V/K²      | +97.8 &deg;C | FEB/8/2024     |
+| Quad ADR1000 module, cell A, trim 2  |  6.6387840 V   | -0.178 &micro;V/V/K   | +0.004 &micro;V/V/K²       | +43.8 &deg;C | FEB/11/2024     |
+| Quad ADR1000 module, cell B, pretrim |  6.6366351 V   | -0.265 &micro;V/V/K   | +0.0006 &micro;V/V/K²      | +232 &deg;C | FEB/8/2024     |
+| Quad ADR1000 module, cell B, trim 2  |  6.6365841 V   | -0.112 &micro;V/V/K   | +0.002 &micro;V/V/K²       | +56.9 &deg;C | FEB/11/2024     |
+| Quad ADR1000 module, cell C, pretrim |  6.6379706 V   | -0.299 &micro;V/V/K   | +0.0017 &micro;V/V/K²      | +110.5 &deg;C | FEB/8/2024     |
+| Quad ADR1000 module, cell C, trim 2  |  6.6379537 V   | -0.237 &micro;V/V/K   | -0.001 &micro;V/V/K²       | -139.3 &deg;C | FEB/11/2024     |
+| Quad ADR1000 module, cell D, pretrim |  6.6396817 V   | -0.077 &micro;V/V/K   | +0.0006 &micro;V/V/K²      | +83.2 &deg;C | FEB/8/2024     |
+| Quad ADR1000 module, cell D, trim 2  |  6.6396366 V   | +0.084 &micro;V/V/K   | +0.0012 &micro;V/V/K²      | -10.8 &deg;C | FEB/11/2024     |
+| Quad ADR1000 module, 10V, trimmed, DMM1 | 10.0001937 V   | -0.039 &micro;V/V/K   | +0.001 &micro;V/V/K²      | +43.0 &deg;C | FEB/15/2024     |
+| Quad ADR1000 module, 10V, trimmed, DMM2 | 10.0001830 V   | -0.046 &micro;V/V/K   | +0.001 &micro;V/V/K²      | +39.0 &deg;C | FEB/15/2024     |
+| Dual ADR1000 module, cell 1, trimmed |  6.6236211 V   | -0.017 &micro;V/V/K   | +0.0008 &micro;V/V/K²      | +33.0 &deg;C | JAN/23/2024    |
+| Dual ADR1000 module, cell 2, trimmed |  6.6268250 V   | -0.033 &micro;V/V/K   | +0.0018 &micro;V/V/K²      | +31.8 &deg;C | JAN/23/2024    |
 | Dual ADR1000 module, 10V, trimmed | 10.0003886 V   | -0.0400 &micro;V/V/K   | +0.0017 &micro;V/V/K²      | +27.3 &deg;C | FEB/4/2024     |
-| Single ADR1000 module          | xx.xxxxxxx V   | xx.xxxx &micro;V/V/K   | xx.xxxx &micro;V/V/K²      | +xx.x &deg;C | xxx/x/2024     |
-| Single LTZ1000A module S/N 001 | 10.0000115 V   | -0.0068 &micro;V/V/K   | +0.0032 &micro;V/V/K²      | +24.1 &deg;C | OCT/21/2022    |
-| Single LTZ1000A module S/N USAC | 9.9999622 V   | -0.0242 &micro;V/V/K   | +0.0003 &micro;V/V/K²      | +69.6 &deg;C | JAN/15/2023    |
-| Single LTZ1000A module S/N Echo | 9.9999569 V   | +0.0038 &micro;V/V/K   | +0.0003 &micro;V/V/K²      | +16.1 &deg;C | MAY/19/2019    |
+| LTD module, 1 x ADR1000 DC2333, +65 &deg;C oven | 6.6098933 V   | -0.052 &micro;V/V/K   | +0.0034 &micro;V/V/K²      | +30.6 &deg;C | FEB/19/2024    |
+| LTD module, 1 x ADR1000 DC1839, +75 &deg;C oven | 6.6220864 V   | -0.017 &micro;V/V/K   | +0.0004 &micro;V/V/K²      | +42.7 &deg;C | FEB/19/2024    |
+| LTD module, LTZ1000CH chip, +50 &deg;C oven | 7.0899106 V   | -0.020 &micro;V/V/K   | +0.0014 &micro;V/V/K²      | +30.1 &deg;C | FEB/19/2024    |
+| LTD module, LTZ1000ACH chip, +55 &deg;C oven | 7.1723252 V   | +0.007 &micro;V/V/K   | +0.0010 &micro;V/V/K²      | +19.5 &deg;C | FEB/19/2024    |
+| Single LTZ1000A module S/N 001 | 10.0000115 V   | -0.007 &micro;V/V/K   | +0.0032 &micro;V/V/K²      | +24.1 &deg;C | OCT/21/2022    |
+| Single LTZ1000A module S/N USAC | 9.9999622 V   | -0.024 &micro;V/V/K   | +0.0003 &micro;V/V/K²      | +69.6 &deg;C | JAN/15/2023    |
+| Single LTZ1000A module S/N Echo | 9.9999569 V   | +0.004 &micro;V/V/K   | +0.0003 &micro;V/V/K²      | +16.1 &deg;C | MAY/19/2019    |
 
+Based on these measurements and data it's safe to conclude that new ADR1000-based solution is capable to demonstrate very low temperature coefficient and excellent output stability over the wide laboratory temperature range.
