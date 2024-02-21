@@ -4,7 +4,7 @@
 
 Total number of devices evaluated in this test:
 
-* Reference with ADR1000AHZ production devices, 8 units
+* Reference with ADR1000AHZ production devices - 8 units
 * Reference with LTZ1000ACH#PBF production devices - 4 units
 * Reference with LTZ1000CH#PBF production devices - 1 units
 
@@ -359,25 +359,25 @@ Data set table with all measurement values is also presented below for a summary
 
 | **Device under test**          | **Output**     | **&alpha; T₂₃**        | **&beta;**                 | Zero &alpha; temperature | **Test date**  |
 | :------------                  | :-----------:  | :--------------------: | :------------------------: | :----: | :------------: |
-| Quad ADR1000 module, cell A, pretrim |  6.6388387 V   | -0.348 &micro;V/V/K   | +0.0023 &micro;V/V/K²      | +97.8 &deg;C | FEB/8/2024     |
-| Quad ADR1000 module, cell A, trim 2  |  6.6387840 V   | -0.178 &micro;V/V/K   | +0.004 &micro;V/V/K²       | +43.8 &deg;C | FEB/11/2024     |
-| Quad ADR1000 module, cell B, pretrim |  6.6366351 V   | -0.265 &micro;V/V/K   | +0.0006 &micro;V/V/K²      | +232 &deg;C | FEB/8/2024     |
-| Quad ADR1000 module, cell B, trim 2  |  6.6365841 V   | -0.112 &micro;V/V/K   | +0.002 &micro;V/V/K²       | +56.9 &deg;C | FEB/11/2024     |
-| Quad ADR1000 module, cell C, pretrim |  6.6379706 V   | -0.299 &micro;V/V/K   | +0.0017 &micro;V/V/K²      | +110.5 &deg;C | FEB/8/2024     |
-| Quad ADR1000 module, cell C, trim 2  |  6.6379537 V   | -0.237 &micro;V/V/K   | -0.001 &micro;V/V/K²       | -139.3 &deg;C | FEB/11/2024     |
-| Quad ADR1000 module, cell D, pretrim |  6.6396817 V   | -0.077 &micro;V/V/K   | +0.0006 &micro;V/V/K²      | +83.2 &deg;C | FEB/8/2024     |
-| Quad ADR1000 module, cell D, trim 2  |  6.6396366 V   | +0.084 &micro;V/V/K   | +0.0012 &micro;V/V/K²      | -10.8 &deg;C | FEB/11/2024     |
-| Quad ADR1000 module, 10V, trimmed, DMM1 | 10.0001937 V   | -0.039 &micro;V/V/K   | +0.001 &micro;V/V/K²      | +43.0 &deg;C | FEB/15/2024     |
-| Quad ADR1000 module, 10V, trimmed, DMM2 | 10.0001830 V   | -0.046 &micro;V/V/K   | +0.001 &micro;V/V/K²      | +39.0 &deg;C | FEB/15/2024     |
-| Dual ADR1000 module, cell 1, trimmed |  6.6236211 V   | -0.017 &micro;V/V/K   | +0.0008 &micro;V/V/K²      | +33.0 &deg;C | JAN/23/2024    |
-| Dual ADR1000 module, cell 2, trimmed |  6.6268250 V   | -0.033 &micro;V/V/K   | +0.0018 &micro;V/V/K²      | +31.8 &deg;C | JAN/23/2024    |
-| Dual ADR1000 module, 10V, trimmed | 10.0003886 V   | -0.0400 &micro;V/V/K   | +0.0017 &micro;V/V/K²      | +27.3 &deg;C | FEB/4/2024     |
-| LTD module, 1 x ADR1000 DC2333, +65 &deg;C oven | 6.6098933 V   | -0.052 &micro;V/V/K   | +0.0034 &micro;V/V/K²      | +30.6 &deg;C | FEB/19/2024    |
-| LTD module, 1 x ADR1000 DC1839, +75 &deg;C oven | 6.6220864 V   | -0.017 &micro;V/V/K   | +0.0004 &micro;V/V/K²      | +42.7 &deg;C | FEB/19/2024    |
-| LTD module, LTZ1000CH chip, +50 &deg;C oven | 7.0899106 V   | -0.020 &micro;V/V/K   | +0.0014 &micro;V/V/K²      | +30.1 &deg;C | FEB/19/2024    |
-| LTD module, LTZ1000ACH chip, +55 &deg;C oven | 7.1723252 V   | +0.007 &micro;V/V/K   | +0.0010 &micro;V/V/K²      | +19.5 &deg;C | FEB/19/2024    |
-| Single LTZ1000A module S/N 001 | 10.0000115 V   | -0.007 &micro;V/V/K   | +0.0032 &micro;V/V/K²      | +24.1 &deg;C | OCT/21/2022    |
-| Single LTZ1000A module S/N USAC | 9.9999622 V   | -0.024 &micro;V/V/K   | +0.0003 &micro;V/V/K²      | +69.6 &deg;C | JAN/15/2023    |
-| Single LTZ1000A module S/N Echo | 9.9999569 V   | +0.004 &micro;V/V/K   | +0.0003 &micro;V/V/K²      | +16.1 &deg;C | MAY/19/2019    |
+| 4 x ADR1000 unit, cell A, pretrim |  6.6388387 V   | -0.348 &micro;V/V/K   | +0.0023 &micro;V/V/K²      | +97.8 &deg;C | FEB/8/2024     |
+| 4 x ADR1000 unit, cell A, trim 2  |  6.6387840 V   | -0.178 &micro;V/V/K   | +0.004 &micro;V/V/K²       | +43.8 &deg;C | FEB/11/2024     |
+| 4 x ADR1000 unit, cell B, pretrim |  6.6366351 V   | -0.265 &micro;V/V/K   | +0.0006 &micro;V/V/K²      | +232 &deg;C | FEB/8/2024     |
+| 4 x ADR1000 unit, cell B, trim 2  |  6.6365841 V   | -0.112 &micro;V/V/K   | +0.002 &micro;V/V/K²       | +56.9 &deg;C | FEB/11/2024     |
+| 4 x ADR1000 unit, cell C, pretrim |  6.6379706 V   | -0.299 &micro;V/V/K   | +0.0017 &micro;V/V/K²      | +110.5 &deg;C | FEB/8/2024     |
+| 4 x ADR1000 unit, cell C, trim 2  |  6.6379537 V   | -0.237 &micro;V/V/K   | -0.001 &micro;V/V/K²       | -139.3 &deg;C | FEB/11/2024     |
+| 4 x ADR1000 unit, cell D, pretrim |  6.6396817 V   | -0.077 &micro;V/V/K   | +0.0006 &micro;V/V/K²      | +83.2 &deg;C | FEB/8/2024     |
+| 4 x ADR1000 unit, cell D, trim 2  |  6.6396366 V   | +0.084 &micro;V/V/K   | +0.0012 &micro;V/V/K²      | -10.8 &deg;C | FEB/11/2024     |
+| 4 x ADR1000 unit, 10V, DMM1 | 10.0001937 V   | -0.039 &micro;V/V/K   | +0.001 &micro;V/V/K²      | +43.0 &deg;C | FEB/15/2024     |
+| 4 x ADR1000 unit, 10V, DMM2 | 10.0001830 V   | -0.046 &micro;V/V/K   | +0.001 &micro;V/V/K²      | +39.0 &deg;C | FEB/15/2024     |
+| 2 x ADR1000 unit, cell 1, trim |  6.6236211 V   | -0.017 &micro;V/V/K   | +0.0008 &micro;V/V/K²      | +33.0 &deg;C | JAN/23/2024    |
+| 2 x ADR1000 unit, cell 2, trim |  6.6268250 V   | -0.033 &micro;V/V/K   | +0.0018 &micro;V/V/K²      | +31.8 &deg;C | JAN/23/2024    |
+| 2 x ADR1000 unit, 10V, trim | 10.0003886 V   | -0.0400 &micro;V/V/K   | +0.0017 &micro;V/V/K²      | +27.3 &deg;C | FEB/4/2024     |
+| LTD module, 1 x ADR1000 DC2333, +65 &deg;C Ts | 6.6098933 V   | -0.052 &micro;V/V/K   | +0.0034 &micro;V/V/K²      | +30.6 &deg;C | FEB/19/2024    |
+| LTD module, 1 x ADR1000 DC1839, +75 &deg;C Ts | 6.6220864 V   | -0.017 &micro;V/V/K   | +0.0004 &micro;V/V/K²      | +42.7 &deg;C | FEB/19/2024    |
+| LTD module, LTZ1000CH chip, +50 &deg;C Ts | 7.0899106 V   | -0.020 &micro;V/V/K   | +0.0014 &micro;V/V/K²      | +30.1 &deg;C | FEB/19/2024    |
+| LTD module, LTZ1000ACH chip, +55 &deg;C Ts | 7.1723252 V   | +0.007 &micro;V/V/K   | +0.0010 &micro;V/V/K²      | +19.5 &deg;C | FEB/19/2024    |
+| 1 x LTZ1000A unit S/N 001 | 10.0000115 V   | -0.007 &micro;V/V/K   | +0.0032 &micro;V/V/K²      | +24.1 &deg;C | OCT/21/2022    |
+| 1 x LTZ1000A unit S/N USAC | 9.9999622 V   | -0.024 &micro;V/V/K   | +0.0003 &micro;V/V/K²      | +69.6 &deg;C | JAN/15/2023    |
+| 1 x LTZ1000A unit S/N Echo | 9.9999569 V   | +0.004 &micro;V/V/K   | +0.0003 &micro;V/V/K²      | +16.1 &deg;C | MAY/19/2019    |
 
 Based on these measurements and data it's safe to conclude that new ADR1000-based solution is capable to demonstrate very low temperature coefficient and excellent output stability over the wide laboratory temperature range.
