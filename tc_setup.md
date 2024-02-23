@@ -4,9 +4,9 @@
 
 Total number of devices evaluated in this test:
 
-* Reference with ADR1000AHZ production devices - 8 units
-* Reference with LTZ1000ACH#PBF production devices - 4 units
-* Reference with LTZ1000CH#PBF production devices - 1 units
+* Reference with ADR1000AHZ production devices - 8 chips
+* Reference with LTZ1000ACH#PBF production devices - 4 chips
+* Reference with LTZ1000CH#PBF production devices - 1 chip
 
 Temperature is a large factor and possible measurement error contributor of the laboratory instrument. Amplitude of temperature-related output change determines temperature coefficient and depends on many design features, such as materials, power distribution, physical layout and electrical circuit design. Minimizing temperature coefficient can be achieved by using material junctions with low parasitic EMF, careful thermal design with optimized uniformity and active heating/cooling stabilization.
 
@@ -161,7 +161,7 @@ No special aging was performed on any of the chips. They sat on the shelf with n
 |Q1 resistor           | Susumu 68 k&Omega; | Susumu 68 k&Omega; | MELF 62 k&Omega; | MELF 62 k&Omega; |
 |Q2 resistor           | Susumu 68 k&Omega; | Susumu 68 k&Omega; | MELF 62 k&Omega; | MELF 62 k&Omega; |
 |FB capacitors         | 0.15 uF 1206 film  | 0.15 uF 1206 film  | 0.15 uF 1206 film  | 0.15 uF 1206 film  |
-|TC feedback           | 150 k&Omega; | 820 k&Omega; | 334 k&Omega; | 820 k&Omega; |
+|TC feedback           | 150 k&Omega; | 820 k&Omega; | 500 k&Omega; | 820 k&Omega; |
 |Noise, 0.1 Hz - 10 Hz | 895 nV pk-pk | 957 nV pk-pk | 367 nV pk-pk | 410 nV pk-pk |
 |[Output voltage, FEB.13.2024](https://xdevs.com/hp3458abc_k2002ltc_ltdqvr_qvrq_raw6v6fix_avg_tcr_40c_820kABD_trimmed10v_run_feb2024/) | 7.17232133 V | 7.09003609 V | 6.60987871 V | 6.62218042 V |
 
