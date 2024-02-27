@@ -210,3 +210,11 @@ Data set table with all measurement values is also presented below for further a
 | Wavetek 4808 @ 10 V          |  N/A         | 2611 nV                                | 233 nV                       |
 | HP3245A @ 7.19 V             |  N/A         | 54400 nV                               | 5100 nV                      |
 | Setup BN floor               |  N/A         | 102 nV                                 | 9 nV                         |
+
+## ADR1000 Noise performance relative to zener current setpoint
+
+To investigate ADR1000's relationship between output 6.6V noise to zener current additional test setup was utilized with various paralleled resistances added to nominal 120 &Omega; current setting resistor. For this socketed xDevs.com FX module was utilized. Zener operated at +65 &deg;C with 70 k&Omega; bias resistors. Operational amplifier LT1013 was utilized in both oven and voltage control loops. Results provided in charts presented below:
+
+![Measured noise relationship to zener current setpoint](https://github.com/tin-/adr1000/blob/main/noise/adr1000_en_vs_iz.png?raw=true)
+
+Overall sweet spot for lower noise operation is around 60-80 &Omega; which corresponds to zener current around 6-8 mA and output zener noise measured around 390-440 nV peak to peak in 0.1 Hz to 10 Hz bandwidth. Driving ADR1000 with high current over 10 mA provide only marginal improvement.
