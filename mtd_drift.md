@@ -59,6 +59,12 @@ Based on this time frame conclusion is:
 2. New year 2023 week 33 ADR1000 chip shows promising stabilization time, more into future will determine if this statement holds.
 3. Old year 2018 week 39 ADR1000 chip does not stabilize in 700 hours timeframe after assembly.
 
+## April 2024 data : 1000 hours 
+
+![April beginning](https://xdevs.com/doc/xDevs.com/QVRL/cal/ltd_qvr_mar2024_3d.png)
+
+This time I've added some processing to cancel out systematic short-term errors from the measurement setup equipment in the zener array. This resulted in much nicer data set without much of noisy jumps due to temperature changes in the room. Overall behaviour of the references remained the same. LTZ-based cells wiggle very close to 0.0 &micro;V/V level, essentially staying stable since first 141 hours. ADR that runs at higher temperature continued it's down-ward drift, while ADR1000 at +65 &deg;C also started to drift down after spending a week at +2.2 &micro;V/V level.
+
 ## Other notable references
 
 * [Forum page about ADR1000-based references](https://www.eevblog.com/forum/metrology/lowest-drift-lowest-noise-voltage-reference/) - branadic and Andreas also demonstrated long-term drift by ADR1000 with similar behavior, despite completely different instrumentation approach.
