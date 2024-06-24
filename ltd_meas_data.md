@@ -41,7 +41,7 @@ This method is also what Fluke recommends performing calibration of their own 73
 
 Based on similar setup and 2182A nanovoltmeter + DP160A scanner instrumentation following results were obtained. Tests were performed on both 6.6V zener output voltage and with scaled 10V output voltages.
 
-![Long-term results](https://xdevs.com/doc/xDevs.com/QVRA/ltd_data_588days_invert.png)
+![Long-term results](https://xdevs.com/doc/xDevs.com/QVRA/ltd_data_588days_blk.png)
 
 ## ADR1000AHZ module QVR4, four chips averaged. amplified 10 V output
 
