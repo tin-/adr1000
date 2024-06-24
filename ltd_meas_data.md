@@ -4,6 +4,7 @@
 Total number of devices evaluated in long-term drift test:
 
 * References with ADR1000AHZ manufactured with date code 39 week 2018, 3 units
+* Reference with mixed ADR1000AHZ and LTZ1000, LTZ1000A, 1 unit
 * References with LTZ1000ACH#PBF production devices - 2 units
 * xDevs.com QVR device with four LTZ1000ACH averaged with passive resistor network - 1 unit
 
