@@ -4,7 +4,8 @@ Data repository for Analog Devices ADR1000-based xDevs.com module voltage standa
 Current Status
 --------------
 * Drift data collection/analysis : [588 days done, monitoring in progress](ltd_meas_data.md)
-* Mid-term drift evaluation: [done](mtd_drift.md)
+* Mid-term 3000 hours drift evaluation: [done](mtd_drift.md)
+* Impact from 8-hour +115 &deg;C bake on stability: [data collecting, TBC Q4'2024]
 * Short-term noise evaluation: [done](lf_noise_data.md)
 * Tempco evaluation: [done](tc_setup.md)
 * PSRR evaluation: planned Q4'2024
