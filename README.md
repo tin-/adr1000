@@ -1,4 +1,4 @@
-# ADR1000 performance study
+# Analog Devices ADR1000 zener performance study
 Data repository for Analog Devices ADR1000-based xDevs.com module voltage standards performance, collected by [xDevs.com lab](https://xdevs.com/).
 
 Current Status
