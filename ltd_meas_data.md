@@ -41,23 +41,43 @@ This method is also what Fluke recommends performing calibration of their own 73
 
 Based on similar setup and 2182A nanovoltmeter + DP160A scanner instrumentation following results were obtained. Tests were performed on both 6.6V zener output voltage and with scaled 10V output voltages.
 
-![Long-term results](https://xdevs.com/doc/xDevs.com/QVRA/ltd_chart_10khrs_blk.png)
+![Long-term results](https://xdevs.com/doc/xDevs.com/QVRA/ltd_data_588days_invert.png)
 
 ## ADR1000AHZ module QVR4, four chips averaged. amplified 10 V output
 
-This quad-ADR1000 long-term drift after first 6200 hours follows linear -1.813 &micro;V/V/year trend for 10V output. There is visible temperature coefficient impact from end of September 2023 to December 2023 due to daily temperature cycling. This module was not adjusted for low temperature coefficient yet.
+This quad-ADR1000 long-term drift after first 6200 hours follows linear -2.672 &micro;V/V/year trend for 10V output. There is visible temperature coefficient impact from end of September 2023 to December 2023 due to daily temperature cycling. This module was not adjusted for low temperature coefficient initially, but was adjusted and provided with 10 V output around 17 February 2024 week. Values used to determine long-term drift presented in a table below.
+
+| **Drift data**         | Voltage relative to power up data | Date |
+| :------------------:   | :-------: | :-------: | :-------: | :-------: |
+| Deviation on 6200 hour mark  | -5.11 &micro;V/V | 25 July, 2023 |
+| Deviation on 14100 hour mark  | -7.52 &micro;V/V | 22 June, 2024 |
 
 ## ADR1000AHZ module QVR4, four chips averaged, averaged zener 6.625V output
 
-This module long-term drift after first 6200 hours on the same module as above, but with averaged zener 6.625V output follows linear -2.607 &micro;V/V/year trend. This result suggests the additional positive drift characteristics of output amplifier, as long-term drift trend is flatter on 10V output. There is same visible temperature coefficient impact from end of September 2023 to December 2023 due to daily temperature cycling. 
+This module long-term drift after first 6200 hours on the same module as above, but with averaged zener 6.625V output follows linear -3.060 &micro;V/V/year trend. This result suggests the additional positive drift characteristics of output amplifier, as long-term drift trend is flatter on 10V output. There is same visible temperature coefficient impact from end of September 2023 to December 2023 due to daily temperature cycling. 
+
+| **Drift data**         | Voltage relative to power up data | Date |
+| :------------------:   | :-------: | :-------: | :-------: | :-------: |
+| Deviation on 6200 hour mark  | -6.25 &micro;V/V | 25 July, 2023 |
+| Deviation on 14100 hour mark  | -9.01 &micro;V/V | 22 June, 2024 |
 
 ## ADR1000AHZ module QVR2, two chips averaged, amplified 10 V output
 
-Dual-ADR1000 module 10V amplified output long-term drift after first 6200 hours follows linear -2.217 &micro;V/V/year trend. Temperature coefficient was adjusted to -0.048 &micro;V/V/K in this module, so we don't see additional noise from daily temperature changes in the laboratory. Long term drift slope is also smaller than RAW zener output on either single or quad-ADR modules. RAW zener output of dual-ADR module was not measured.
+Dual-ADR1000 module 10V amplified output long-term drift after first 6200 hours follows linear -3.054 &micro;V/V/year trend. Temperature coefficient was adjusted to -0.048 &micro;V/V/K in this module, so we don't see additional noise from daily temperature changes in the laboratory. Long term drift slope is also smaller than RAW zener output on either single or quad-ADR modules. RAW zener output of dual-ADR module was not measured. Dual ADR1000 demonstrated largest overall deviation from the power up, with final value -9.88 &micro;V/V.
+
+| **Drift data**         | Voltage relative to power up data | Date |
+| :------------------:   | :-------: | :-------: | :-------: | :-------: |
+| Deviation on 6200 hour mark  | -7.23 &micro;V/V | 25 July, 2023 |
+| Deviation on 13800 hour mark  | -9.88 &micro;V/V | 9 June, 2024 |
 
 ## ADR1000AHZ module QVR1, single chip, 6.625V output
 
-Single-ADR1000 module long-term drift after first 6200 hours follows linear -2.711 &micro;V/V/year trend. Temperature coefficient was adjusted to -0.05 &micro;V/V/K in this module, so we don't see additional noise from daily temperature changes in the laboratory. Single ADR1000 demonstrated largest overall deviation from the power up, with final value -8.7 &micro;V/V.
+| **Drift data**         | Voltage relative to power up data | Date |
+| :------------------:   | :-------: | :-------: | :-------: | :-------: |
+| Deviation on 6200 hour mark  | -5.74 &micro;V/V | 25 July, 2023 |
+| Deviation on 13800 hour mark  | -8.45 &micro;V/V | 9 June, 2024 |
+
+Single-ADR1000 module long-term drift after first 6200 hours follows linear -3.124 &micro;V/V/year trend. Temperature coefficient was adjusted to -0.05 &micro;V/V/K in this module, so we don't see additional noise from daily temperature changes in the laboratory. 
 
 ## [LTZ1000ACH "FX" unit S/N X102, 10 V output](https://xdevs.com/article/792x/)
 
@@ -65,23 +85,7 @@ Single-ADR1000 module long-term drift after first 6200 hours follows linear -2.7
 
 Single-LTZ1000 FX module long-term drift after from the very beginning follows linear -0.174 &micro;V/V/year trend over the period of this study and -0.24 &micro;V/V/year over a trend since March 2019 till January 2024. Temperature coefficient was adjusted to -0.03 &micro;V/V/K in this module, so we don't see additional noise from daily temperature changes in the laboratory. This reference runs under constant power uninterrupted since January 2018. 
 
-## Fluke 732A unit, S/N 4045004
-
-Commercial 10V DC voltage standard that was serviced and continously powered up since summer 2022. Long-term drift after from the very beginning follows linear -0.045 &micro;V/V/year trend. 
-
-## Fluke 732A unit, S/N 3195010
-
-Commercial 10V DC voltage standard that was serviced and continously powered up since summer 2022. Long-term drift after from the very beginning follows linear +0.304 &micro;V/V/year trend. 
-
-RAW data set with all measurement value is also available in Excel and CSV-format in this repository for the further analysis. 
-
-[Excel RAW-data file with all points used in analysis](https://xdevs.com/doc/xDevs.com/QVRA/ltd_data_cml.xlsx)
-
-[CSV RAW-data file with all points used in analysis](https://xdevs.com/doc/xDevs.com/QVRA/ltd_data_samples.csv)
-
-## Future work
-
-The study of long-term drift leaves some questions open, such as how oven set point temperature and zener current affect long-term drift, and require larger sample set to gain more confidence in results. In theory, higher current and higher temperature would cause drift rate to accelerate as well, but it's not so simple in the real world application. Experimental verification of these claims would be very useful and will be done at a later date. These initial results exhibit larger than expected 0.5 &micro;V/V/year initial drift of new ADR1000 zener IC after first 6200 hours after power up and highlight importance of careful procedures and possible need of selection to obtain desired long term stability better than 1 &micro;V/V per year.
+## Mixed QVR-module with ADR and LTZ combination, assembled in the early 2024 for new study
 
 Current setup is undergoing modification to include additional modules with new ICs and better setup to collect larger dataset for more detailed analysis in future. Additional module was assembled fresh on February 11, 2024 with goal to run different chips in the same PCBA in same conditions and compare their long-term stability from first power on. 
 
@@ -111,6 +115,63 @@ No magical special aging was performed on any of the chips. They sat on the shel
 Averaging of zener outputs is also unused (Z6 network is not populated), as only individual zener IC outputs will be monitored from this module. 
 
 ![Setup with LTD QVR build](https://xdevs.com/doc/xDevs.com/QVRL/img/ltdqvr_resn_1.jpg)
+
+After tempco trimming and adjustments on module SN0005 completed this module was permanently connected to zener array bank per NIST TN430 with series-opposition connected scanned zeners and nanovoltmeter. This will allow us to collect long-term drift data with one sample/zener collected every 1.5 hours.
+
+### March 2024 data : 700 hours 
+
+![March data](https://xdevs.com/doc/xDevs.com/QVRL/cal/ltd_qvr_mar2024.png)
+
+After running reference powered up for total 700 hours (first 140.5 hours are omitted from plot, "zero" reference taken on 19 February, 2024) drift difference between different chips is quite noticeable.
+
+Both LTZ1000CH and LTZ1000ACH demonstrate clear absence of any significant drift, which underline excellent performance of LTZ design once again. All we can see on LTZ outputs is just residual temperature coefficient play and random noise walk up and down. Worst outlier points for these chips staying within &plusmn;0.4 &micro;V/V from initial point on 19 February, 2024. 
+
+ADR1000 chips however are not so stable and have significant drift. Newer 33 week 2023 chip which is running at +65 &deg;C oven setpoint demonstrated upward +2.0 &micro;V/V drift in first 8 days from zero point and then somewhat stabilized with walk around &plusmn;0.3 &micro;V/V. Older 2018 week 39 chip running at hotter +75 &deg;C (as datasheet recommends to us) and demonstrate opposite drift of -4.2 &micro;V/V and still going. There is no visible stabilization time for this chip, just like with other 1839 chips from older module we explored in long-term drift study page.
+
+Based on this time frame conclusion is:
+
+1. LTZ1000-based solutions already able to stabilize in time period less than 140 hours after assembly.
+2. New year 2023 week 33 ADR1000 chip shows promising stabilization time, more into future will determine if this statement holds.
+3. Old year 2018 week 39 ADR1000 chip does not stabilize in 700 hours timeframe after assembly.
+
+### May 2024 data : 2544 hours
+
+![May data](https://xdevs.com/doc/xDevs.com/QVRL/cal/ltd_qvr_2544hours.png)
+
+Updated dataset with 2544 hours of runtime on QVR comparison module shows us some new information. Finally difference of performance from the ADR1000 chip running at +65 &deg;C and one at hotter +75 &deg;C becomes visible. Both LTZ1000 and LTZ1000A still continue to offer far superior stability to the new redesigned reference, with worst deviation at -0.9 &micro;V/V after equal runtime duration, compared to -5.5 &micro;V/V that hotter ADR1000 shows. 
+
+Voltage bank array was scanning some another experiment from April 16 till April 18 which is reflected as a gap in data on the chart. References were kept untouched and still powered in this data collection gap.
+
+Based on this time frame data conclusion is:
+
+1. LTZ1000-based solutions demonstrate excellent stability with predictable linear drift downwards.
+2. ADR1000 chip at +65 &deg;C reversed it's drift direction and now continue to drift downwards at fairly large slope.
+3. ADR1000 chip at +75 &deg;C always had drift down and now settling to more linear trend faster than colder oven chip.
+4. Statement 2 from the previous 700 hour dataset now confirmed to be false.
+
+### June 2024 data : 3120 hours
+
+![June data](https://xdevs.com/doc/xDevs.com/QVRL/cal/ltd_qvr_3120hrs.png)
+
+To stir things up a little bit the board was powered off on June 22, 2024 3:00pm and baked in the convection oven at around +115 &deg;C for 8 hours. Reference module was unpowered during whole baking duration.
+
+## Fluke 732A unit, S/N 4045004
+
+Commercial 10V DC voltage standard that was serviced and continously powered up since summer 2022. Long-term drift after from the very beginning follows linear -0.045 &micro;V/V/year trend. 
+
+## Fluke 732A unit, S/N 3195010
+
+Commercial 10V DC voltage standard that was serviced and continously powered up since summer 2022. Long-term drift after from the very beginning follows linear +0.304 &micro;V/V/year trend. 
+
+RAW data set with all measurement value is also available in Excel and CSV-format in this repository for the further analysis. 
+
+[Excel RAW-data file with all points used in analysis](https://xdevs.com/doc/xDevs.com/QVRA/ltd_data_cml.xlsx)
+
+[CSV RAW-data file with all points used in analysis](https://xdevs.com/doc/xDevs.com/QVRA/ltd_data_samples.csv)
+
+## Future work
+
+The study of long-term drift leaves some questions open, such as how oven set point temperature and zener current affect long-term drift, and require larger sample set to gain more confidence in results. In theory, higher current and higher temperature would cause drift rate to accelerate as well, but it's not so simple in the real world application. Experimental verification of these claims would be very useful and will be done at a later date. These initial results exhibit larger than expected 0.5 &micro;V/V/year initial drift of new ADR1000 zener IC after first 6200 hours after power up and highlight importance of careful procedures and possible need of selection to obtain desired long term stability better than 1 &micro;V/V per year.
 
 ## Other notable references
 
