@@ -48,7 +48,7 @@ Based on similar setup and 2182A nanovoltmeter + DP160A scanner instrumentation 
 This quad-ADR1000 long-term drift after first 6200 hours follows linear -2.672 &micro;V/V/year trend for 10V output. There is visible temperature coefficient impact from end of September 2023 to December 2023 due to daily temperature cycling. This module was not adjusted for low temperature coefficient initially, but was adjusted and provided with 10 V output around 17 February 2024 week. Values used to determine long-term drift presented in a table below.
 
 | **Drift data**         | Voltage relative to power up data | Date |
-| :------------------:   | :-------: | :-------: | :-------: | :-------: |
+| :------------------:   | :-------: | :-------: |
 | Deviation on 6200 hour mark  | -5.11 &micro;V/V | 25 July, 2023 |
 | Deviation on 14100 hour mark  | -7.52 &micro;V/V | 22 June, 2024 |
 
@@ -57,7 +57,7 @@ This quad-ADR1000 long-term drift after first 6200 hours follows linear -2.672 &
 This module long-term drift after first 6200 hours on the same module as above, but with averaged zener 6.625V output follows linear -3.060 &micro;V/V/year trend. This result suggests the additional positive drift characteristics of output amplifier, as long-term drift trend is flatter on 10V output. There is same visible temperature coefficient impact from end of September 2023 to December 2023 due to daily temperature cycling. 
 
 | **Drift data**         | Voltage relative to power up data | Date |
-| :------------------:   | :-------: | :-------: | :-------: | :-------: |
+| :------------------:   | :-------: | :-------: |
 | Deviation on 6200 hour mark  | -6.25 &micro;V/V | 25 July, 2023 |
 | Deviation on 14100 hour mark  | -9.01 &micro;V/V | 22 June, 2024 |
 
@@ -66,14 +66,14 @@ This module long-term drift after first 6200 hours on the same module as above, 
 Dual-ADR1000 module 10V amplified output long-term drift after first 6200 hours follows linear -3.054 &micro;V/V/year trend. Temperature coefficient was adjusted to -0.048 &micro;V/V/K in this module, so we don't see additional noise from daily temperature changes in the laboratory. Long term drift slope is also smaller than RAW zener output on either single or quad-ADR modules. RAW zener output of dual-ADR module was not measured. Dual ADR1000 demonstrated largest overall deviation from the power up, with final value -9.88 &micro;V/V.
 
 | **Drift data**         | Voltage relative to power up data | Date |
-| :------------------:   | :-------: | :-------: | :-------: | :-------: |
+| :------------------:   | :-------: | :-------: |
 | Deviation on 6200 hour mark  | -7.23 &micro;V/V | 25 July, 2023 |
 | Deviation on 13800 hour mark  | -9.88 &micro;V/V | 9 June, 2024 |
 
 ## ADR1000AHZ module QVR1, single chip, 6.625V output
 
 | **Drift data**         | Voltage relative to power up data | Date |
-| :------------------:   | :-------: | :-------: | :-------: | :-------: |
+| :------------------:   | :-------: | :-------: |
 | Deviation on 6200 hour mark  | -5.74 &micro;V/V | 25 July, 2023 |
 | Deviation on 13800 hour mark  | -8.45 &micro;V/V | 9 June, 2024 |
 
@@ -165,7 +165,7 @@ Commercial 10V DC voltage standard that was serviced and continously powered up 
 
 RAW data set with all measurement value is also available in Excel and CSV-format in this repository for the further analysis. 
 
-[Excel RAW-data file with all points used in analysis](https://xdevs.com/doc/xDevs.com/QVRA/ltd_data_cml.xlsx)
+[Excel RAW-data file with all points used in analysis](https://xdevs.com/doc/xDevs.com/QVRA/ltd_data_samples4.xlsx)
 
 [CSV RAW-data file with all points used in analysis](https://xdevs.com/doc/xDevs.com/QVRA/ltd_data_samples.csv)
 
