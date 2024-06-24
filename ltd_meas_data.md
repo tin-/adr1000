@@ -117,38 +117,9 @@ Averaging of zener outputs is also unused (Z6 network is not populated), as only
 
 ![Setup with LTD QVR build](https://xdevs.com/doc/xDevs.com/QVRL/img/ltdqvr_resn_1.jpg)
 
-After tempco trimming and adjustments on module SN0005 completed this module was permanently connected to zener array bank per NIST TN430 with series-opposition connected scanned zeners and nanovoltmeter. This will allow us to collect long-term drift data with one sample/zener collected every 1.5 hours.
+After tempco trimming and adjustments on module SN0005 completed this module was permanently connected to zener array bank per NIST TN430 with series-opposition connected scanned zeners and nanovoltmeter. This will allow us to collect long-term drift data with one sample/zener collected every 1.5 hours. 
 
-### March 2024 data : 700 hours 
-
-![March data](https://xdevs.com/doc/xDevs.com/QVRL/cal/ltd_qvr_mar2024.png)
-
-After running reference powered up for total 700 hours (first 140.5 hours are omitted from plot, "zero" reference taken on 19 February, 2024) drift difference between different chips is quite noticeable.
-
-Both LTZ1000CH and LTZ1000ACH demonstrate clear absence of any significant drift, which underline excellent performance of LTZ design once again. All we can see on LTZ outputs is just residual temperature coefficient play and random noise walk up and down. Worst outlier points for these chips staying within &plusmn;0.4 &micro;V/V from initial point on 19 February, 2024. 
-
-ADR1000 chips however are not so stable and have significant drift. Newer 33 week 2023 chip which is running at +65 &deg;C oven setpoint demonstrated upward +2.0 &micro;V/V drift in first 8 days from zero point and then somewhat stabilized with walk around &plusmn;0.3 &micro;V/V. Older 2018 week 39 chip running at hotter +75 &deg;C (as datasheet recommends to us) and demonstrate opposite drift of -4.2 &micro;V/V and still going. There is no visible stabilization time for this chip, just like with other 1839 chips from older module we explored in long-term drift study page.
-
-Based on this time frame conclusion is:
-
-1. LTZ1000-based solutions already able to stabilize in time period less than 140 hours after assembly.
-2. New year 2023 week 33 ADR1000 chip shows promising stabilization time, more into future will determine if this statement holds.
-3. Old year 2018 week 39 ADR1000 chip does not stabilize in 700 hours timeframe after assembly.
-
-### May 2024 data : 2544 hours
-
-![May data](https://xdevs.com/doc/xDevs.com/QVRL/cal/ltd_qvr_2544hours.png)
-
-Updated dataset with 2544 hours of runtime on QVR comparison module shows us some new information. Finally difference of performance from the ADR1000 chip running at +65 &deg;C and one at hotter +75 &deg;C becomes visible. Both LTZ1000 and LTZ1000A still continue to offer far superior stability to the new redesigned reference, with worst deviation at -0.9 &micro;V/V after equal runtime duration, compared to -5.5 &micro;V/V that hotter ADR1000 shows. 
-
-Voltage bank array was scanning some another experiment from April 16 till April 18 which is reflected as a gap in data on the chart. References were kept untouched and still powered in this data collection gap.
-
-Based on this time frame data conclusion is:
-
-1. LTZ1000-based solutions demonstrate excellent stability with predictable linear drift downwards.
-2. ADR1000 chip at +65 &deg;C reversed it's drift direction and now continue to drift downwards at fairly large slope.
-3. ADR1000 chip at +75 &deg;C always had drift down and now settling to more linear trend faster than colder oven chip.
-4. Statement 2 from the previous 700 hour dataset now confirmed to be false.
+You an check first 3000 hours drift data with details in [Mid-term drift page](mtd_drift.md)
 
 ### June 2024 data : 3120 hours
 
