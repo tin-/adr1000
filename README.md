@@ -15,6 +15,8 @@ Introduction
 
 This repository contains the data collected on [xDevs.com QVR](https://xdevs.com/article/qvref/) and [xDevs.com FX](https://xdevs.com/article/792x/) voltage reference modules assembled with [Analog Devices ADR1000AHZ](https://xdevs.com/article/adr1000order/) buried zener IC. Consistent with my primary use cases for these devices in DC voltage metrology projects, these modules designed with focus on low noise (measured at ~500 nV pk-pk from 0.01-10 Hz) and good stability below 10 ppm/year. The project includes number of datasets, provided for analysis and educational use. 
 
+Data in this repository was collected and analyzed within scope of the presentation of [Performance evaluation of the ADR1000 low-noise zener IC](https://ieeexplore.ieee.org/document/10645990/) scientific article at [2024 Conference on Precision Electromagnetic Measurements (CPEM)](https://ieeexplore.ieee.org/xpl/conhome/10645824/proceeding) in Denver, Colorado, USA.
+
 Issues and caveats
 ------------------
 
