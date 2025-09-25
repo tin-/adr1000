@@ -4,7 +4,7 @@ Data repository for Analog Devices ADR1000-based xDevs.com module voltage standa
 Current Status
 --------------
 * Drift data collection/analysis : [1048 days done, monitoring in progress](ltd_meas_data.md)
-* Mid-term 1200 hours drift evaluation: [done](mtd_drift.md)
+* Mixed raw zeners module bake test, 14160 hours drift evaluation: [done](mtd_drift.md)
 * Impact from 8-hour +115 &deg;C bake on stability: [data collecting, reached very low drift after 3 months]
 * Short-term noise evaluation: [done](lf_noise_data.md)
 * Tempco evaluation: [done](tc_setup.md)
