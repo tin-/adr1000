@@ -131,7 +131,7 @@ Averaging of zener outputs is also unused (Z6 network is not populated), as only
 
 After tempco trimming and adjustments on module SN0005 completed this module was permanently connected to zener array bank per NIST TN430 with series-opposition connected scanned zeners and nanovoltmeter. This will allow us to collect long-term drift data with one sample/zener collected every 1.5 hours. 
 
-You an check first 3000 hours drift data with details in [Mid-term drift page](mtd_drift.md)
+You an check first some more data with details in [Mid-term drift page](mtd_drift.md)
 
 ### June 2024 data : 3120 hours
 
