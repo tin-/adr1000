@@ -1,4 +1,4 @@
-# Mid-term drift measurement (months)
+# Mid-term drift measurement on mixed zener module (multiple months)
 ---
 
 Total number of devices evaluated in secondary medium-term drift test shown in list below. All chips are populated on same PCBA and powered by same regulator. They are monitored by same zener array and automated method used for long-term measurement.
@@ -71,6 +71,14 @@ This time I've added some processing to cancel out systematic short-term errors 
 
 To stir things up a little bit the board was powered off on June 22, 2024 3:00pm and baked in the convection oven at around +115 &deg;C for 8 hours. Reference module was unpowered during whole baking duration.
 
+### September 2024 data : 4440 hours
+
+Here's zoomed in close data samples collected until October 2024, showcasing close look at behaviour after baking of assembled unpowered board for 8 hours.
+
+![](https://xdevs.com/doc/xDevs.com/CalFest_2025/dcv/bake_zoom.png)
+
+Behaviour difference between LTZ1000,LTZ1000A cells and ADR1000 is clearly visible. New ADR1000 require about a month of time to resetlle in new operation "condition". We can also make a positive observation on performance of ADR1000 @ +75°C, which reached stable operation 3 month since baking. ADR1000 at lower temperature still drift down on this timescale. Both LTZ1000 cells demonstrate more or less stable linear drift.
+
 ###  July 2025 data : 12696 hours, 529 days
 
 ![July 2025 data](https://xdevs.com/doc/xDevs.com/CalFest_2025/dcv/ltdqvr_2025_jul27.png)
@@ -78,6 +86,12 @@ To stir things up a little bit the board was powered off on June 22, 2024 3:00pm
 This char presents all samples acquired after running this module since 8 hours baking unpowered board on June 22, 2024. Baking process caused a large shift for both ADR1000 and LTZ1000CH cells and smaller shift for LTZ1000ACH cell. This was quite fruitful test, revealing that baked ADR1000 running at +75 °C oven temperature now reached stable condition after only 2 months. ADR1000 cell running at +65 °C took much longer 6 month after baking to settle at steady rate. I was out on vacation during December holidays and forgot to close the window to the lab, causing a dip in ambient temperature below +18 °C. This caused visible jump for LTZ reference cells and no impact on ADR1000 +75.
 
 Beginning of July 2025 I've replaced Keithley 2182A nanovoltmeter to HP 34420A in the zener bank array (that was used to measure these samples too). And since this board outputs just raw zener voltages at 7.x and 6.6x V gain difference of nanovoltmeter caused the clearly visible shift of datasamples. But stability behaviour remained quite similar to data from 2182A. 
+
+### September 2025 data : 14160 : 590 days
+
+![Sep 2025](https://xdevs.com/doc/xDevs.com/CalFest_2025/dcv/ltdqvr_2025_sep24.png)
+
+Updated data after relocation of the lab 600km away and repower. This mixed zener LTD-QVR module was unpowered during the shipment transit.
 
 ## Other notable references
 
