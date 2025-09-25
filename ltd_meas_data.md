@@ -44,6 +44,16 @@ Based on similar setup and 2182A nanovoltmeter + DP160A scanner instrumentation 
 
 ![Long-term results](https://xdevs.com/doc/xDevs.com/QVRA/ltd_data_588days_blk.png)
 
+### Updated data to September 2025
+
+![Long-term 2025 results](https://xdevs.com/doc/xDevs.com/CalFest_2025/dcv/all_data_sep2025.png)
+
+Drift trend of primary 732A and 792X FX standards (used as key reference array) stays <1ppm over 1027 days period, continously logged by series-opposition setup. Short gap in August 2025 is due to relocation to new lab location 600km away, during which 732A/732B and 792X were transported in hard-shell plastic Pelican cases under uninterrupted battery power, while test FX1 (LTZ1000A module) and QVR ADR1000 modules were travelled cold unpowered. Temperature in transit was monitored by small datalogger and kept in range between +21 to +29 °C.
+
+Both 732A and 792X standards were in good agreement after xDevs bank reassembly, while ADR1000 modules demonstrated significant jump about +2-+3 ppm with slow recovery towards previous values. To remind, these ADR1000 modules were not baked or treated prior to connection to zener monitoring array setup.
+
+In next sections we could take a look on individual modules performance.
+
 ## ADR1000AHZ module QVR4, four chips averaged. amplified 10 V output
 
 This quad-ADR1000 long-term drift after first 6200 hours follows linear -2.672 &micro;V/V/year trend for 10V output. There is visible temperature coefficient impact from end of September 2023 to December 2023 due to daily temperature cycling. This module was not adjusted for low temperature coefficient initially, but was adjusted and provided with 10 V output around 17 February 2024 week. Values used to determine long-term drift presented in a table below.
@@ -52,6 +62,7 @@ This quad-ADR1000 long-term drift after first 6200 hours follows linear -2.672 &
 | :------------------:   | :-------: | :-------: |
 | Deviation on 6200 hour mark  | -5.11 &micro;V/V | 25 July, 2023 |
 | Deviation on 14100 hour mark  | -7.52 &micro;V/V | 22 June, 2024 |
+| Deviation on 24650 hour mark  | -8.3 &micro;V/V | 26 July, 2025 |
 
 ## ADR1000AHZ module QVR4, four chips averaged, averaged zener 6.625V output
 
@@ -69,7 +80,8 @@ Dual-ADR1000 module 10V amplified output long-term drift after first 6200 hours 
 | **Drift data**         | Voltage relative to power up data | Date |
 | :------------------:   | :-------: | :-------: |
 | Deviation on 6200 hour mark  | -7.23 &micro;V/V | 25 July, 2023 |
-| Deviation on 13800 hour mark  | -9.88 &micro;V/V | 9 June, 2024 |
+| Deviation on 13800 hour mark  | -8.6 &micro;V/V | 9 June, 2024 |
+| Deviation on 24650 hour mark  | -9.7 &micro;V/V | 26 July, 2025 |
 
 ## ADR1000AHZ module QVR1, single chip, 6.625V output
 
@@ -126,6 +138,14 @@ You an check first 3000 hours drift data with details in [Mid-term drift page](m
 ![June data](https://xdevs.com/doc/xDevs.com/QVRL/cal/ltd_qvr_3120hrs.png)
 
 To stir things up a little bit the board was powered off on June 22, 2024 3:00pm and baked in the convection oven at around +115 &deg;C for 8 hours. Reference module was unpowered during whole baking duration.
+
+###  July 2025 data : 12696 hours, 529 days
+
+![July 2025 data](https://xdevs.com/doc/xDevs.com/CalFest_2025/dcv/ltdqvr_2025_jul27.png)
+
+This char presents all samples acquired after running this module since 8 hours baking unpowered board on June 22, 2024. Baking process caused a large shift for both ADR1000 and LTZ1000CH cells and smaller shift for LTZ1000ACH cell. This was quite fruitful test, revealing that baked ADR1000 running at +75 °C oven temperature now reached stable condition after only 2 months. ADR1000 cell running at +65 °C took much longer 6 month after baking to settle at steady rate. I was out on vacation during December holidays and forgot to close the window to the lab, causing a dip in ambient temperature below +18 °C. This caused visible jump for LTZ reference cells and no impact on ADR1000 +75.
+
+Beginning of July 2025 I've replaced Keithley 2182A nanovoltmeter to HP 34420A in the zener bank array (that was used to measure these samples too). And since this board outputs just raw zener voltages at 7.x and 6.6x V gain difference of nanovoltmeter caused the clearly visible shift of datasamples. But stability behaviour remained quite similar to data from 2182A. 
 
 ## Fluke 732A unit, S/N 4045004
 
