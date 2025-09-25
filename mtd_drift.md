@@ -65,6 +65,20 @@ Based on this time frame conclusion is:
 
 This time I've added some processing to cancel out systematic short-term errors from the measurement setup equipment in the zener array. This resulted in much nicer data set without much of noisy jumps due to temperature changes in the room. Overall behaviour of the references remained the same. LTZ-based cells wiggle very close to 0.0 &micro;V/V level, essentially staying stable since first 141 hours. ADR that runs at higher temperature continued it's down-ward drift, while ADR1000 at +65 &deg;C also started to drift down after spending a week at +2.2 &micro;V/V level.
 
+### June 2024 data : 3120 hours
+
+![June data](https://xdevs.com/doc/xDevs.com/QVRL/cal/ltd_qvr_3120hrs.png)
+
+To stir things up a little bit the board was powered off on June 22, 2024 3:00pm and baked in the convection oven at around +115 &deg;C for 8 hours. Reference module was unpowered during whole baking duration.
+
+###  July 2025 data : 12696 hours, 529 days
+
+![July 2025 data](https://xdevs.com/doc/xDevs.com/CalFest_2025/dcv/ltdqvr_2025_jul27.png)
+
+This char presents all samples acquired after running this module since 8 hours baking unpowered board on June 22, 2024. Baking process caused a large shift for both ADR1000 and LTZ1000CH cells and smaller shift for LTZ1000ACH cell. This was quite fruitful test, revealing that baked ADR1000 running at +75 °C oven temperature now reached stable condition after only 2 months. ADR1000 cell running at +65 °C took much longer 6 month after baking to settle at steady rate. I was out on vacation during December holidays and forgot to close the window to the lab, causing a dip in ambient temperature below +18 °C. This caused visible jump for LTZ reference cells and no impact on ADR1000 +75.
+
+Beginning of July 2025 I've replaced Keithley 2182A nanovoltmeter to HP 34420A in the zener bank array (that was used to measure these samples too). And since this board outputs just raw zener voltages at 7.x and 6.6x V gain difference of nanovoltmeter caused the clearly visible shift of datasamples. But stability behaviour remained quite similar to data from 2182A. 
+
 ## Other notable references
 
 * [Forum page about ADR1000-based references](https://www.eevblog.com/forum/metrology/lowest-drift-lowest-noise-voltage-reference/) - branadic and Andreas also demonstrated long-term drift by ADR1000 with similar behavior, despite completely different instrumentation approach.
