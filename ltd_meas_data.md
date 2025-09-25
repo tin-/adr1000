@@ -7,6 +7,7 @@ Total number of devices evaluated in long-term drift test:
 * Reference with mixed ADR1000AHZ and LTZ1000, LTZ1000A, 1 unit
 * References with LTZ1000ACH#PBF production devices - 2 units
 * xDevs.com QVR device with four LTZ1000ACH averaged with passive resistor network - 1 unit
+* Fluke 732C commercial standard - 1 unit (6 month test)
 
 ![Long-term drift measurement setup](https://xdevs.com/doc/xDevs.com/QVRA/ltd_setup_chart_bk.png)
 
@@ -50,9 +51,11 @@ Based on similar setup and 2182A nanovoltmeter + DP160A scanner instrumentation 
 
 Drift trend of primary 732A and 792X FX standards (used as key reference array) stays <1ppm over 1027 days period, continously logged by series-opposition setup. Short gap in August 2025 is due to relocation to new lab location 600km away, during which 732A/732B and 792X were transported in hard-shell plastic Pelican cases under uninterrupted battery power, while test FX1 (LTZ1000A module) and QVR ADR1000 modules were travelled cold unpowered. Temperature in transit was monitored by small datalogger and kept in range between +21 to +29 °C.
 
-Both 732A and 792X standards were in good agreement after xDevs bank reassembly, while ADR1000 modules demonstrated significant jump about +2-+3 ppm with slow recovery towards previous values. To remind, these ADR1000 modules were not baked or treated prior to connection to zener monitoring array setup.
+Both 732A and 792X standards were in good agreement after xDevs bank reassembly, while ADR1000 modules demonstrated significant jump about +2-+3 ppm with slow recovery towards previous values. To remind, these ADR1000 modules were not baked or treated prior to connection to zener monitoring array setup. Close-up on last few months of data around relocation can be analyzed on chart below:
 
-In next sections we could take a look on individual modules performance.
+![Can move data zoom](https://xdevs.com/doc/xDevs.com/CalFest_2025/dcv/drift_2025can_sep24.png)
+
+Unbaked/untreated ADR1000 modules take long time to recover to previous values after a month of powered-off state. In next sections we could take a look on individual modules performance and some more details.
 
 ## ADR1000AHZ module QVR4, four chips averaged. amplified 10 V output
 
@@ -160,6 +163,14 @@ RAW data set with all measurement value is also available in Excel and CSV-forma
 [Excel RAW-data file with all points used in analysis](https://xdevs.com/doc/xDevs.com/QVRA/ltd_data_samples4.xlsx)
 
 [CSV RAW-data file with all points used in analysis](https://xdevs.com/doc/xDevs.com/QVRA/ltd_data_samples.csv)
+
+## Fluke 732C unit, S/N redacted
+
+This commercial modern standard was tested against two zener arrays (xDevs - orange markers, Niko Lab - blue triangles). This test goals were to determine agreement between two different friendly labs for DCV 10V measurements and to evaluate 732C performance over a period of 6 month.
+
+![732C data](https://xdevs.com/doc/xDevs.com/CalFest_2025/dcv/732c_test.png)
+
+This particular standard demonstrated fairly linear drift downwards at a rate about -2.2 nV/V/day or -0.79 &micro;V/V/year which is within specifications. Old well aged 732A and 732B standards however demonstrate much better performance, often below 0.3 &micro;V/V/year.
 
 ## Future work
 
